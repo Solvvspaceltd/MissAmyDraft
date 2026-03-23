@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Miss Amy's Daycare</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery-section { background: var(--off-white); padding: 60px 5%; }
+
+    /* SLIDESHOW */
+    .slideshow-wrap { max-width: 860px; margin: 0 auto 60px; }
+    .slideshow {
+      position: relative; border-radius: 20px; overflow: hidden;
+      background: var(--navy); aspect-ratio: 16/9;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .slide { display: none; width: 100%; height: 100%; position: absolute; inset: 0; }
+    .slide.active { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .slide-placeholder {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 12px;
+    }
+    .slide-placeholder .slide-icon { font-size: 48px; opacity: 0.4; }
+    .slide-placeholder .slide-label { color: rgba(255,255,255,0.45); font-size: 16px; }
+    .slide-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(13,27,62,0.85));
+      padding: 40px 28px 22px;
+      color: white;
+    }
+    .slide-caption h3 { font-size: 18px; margin-bottom: 4px; }
+    .slide-caption p { font-size: 14px; opacity: 0.75; }
+    .slide-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(245,200,66,0.9); border: none; cursor: pointer;
+      width: 44px; height: 44px; border-radius: 50%;
+      font-size: 18px; color: var(--navy); display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s; z-index: 10;
+    }
+    .slide-btn:hover { background: var(--yellow); transform: translateY(-50%) scale(1.1); }
+    .slide-btn.prev { left: 16px; }
+    .slide-btn.next { right: 16px; }
+    .slide-dots { display: flex; gap: 8px; justify-content: center; margin-top: 16px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); cursor: pointer; transition: all 0.2s; }
+    .dot.active { background: var(--yellow); width: 24px; border-radius: 4px; }
+
+    /* GRID */
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1000px; margin: 0 auto; }
+    .gallery-thumb {
+      background: var(--navy); border-radius: 14px;
+      aspect-ratio: 1; overflow: hidden; cursor: pointer;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      position: relative; transition: all 0.2s;
+      border: 2px solid transparent;
+    }
+    .gallery-thumb:hover { border-color: var(--yellow); transform: scale(1.02); }
+    .gallery-thumb .thumb-icon { font-size: 32px; opacity: 0.35; }
+    .gallery-thumb .thumb-label { color: rgba(255,255,255,0.35); font-size: 13px; margin-top: 8px; text-align: center; padding: 0 12px; }
+    .gallery-thumb .thumb-overlay {
+      position: absolute; inset: 0; background: rgba(13,27,62,0.7);
+      display: flex; align-items: flex-end; padding: 14px;
+      opacity: 0; transition: opacity 0.2s;
+    }
+    .gallery-thumb:hover .thumb-overlay { opacity: 1; }
+    .thumb-overlay span { color: white; font-size: 13px; line-height: 1.4; }
+
+    .gallery-categories { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; }
+    .cat-btn { padding: 8px 18px; border-radius: 100px; border: 1.5px solid var(--border); background: var(--white); font-size: 14px; cursor: pointer; color: var(--muted); transition: all 0.2s; font-family: 'DM Sans', sans-serif; }
+    .cat-btn.active, .cat-btn:hover { background: var(--navy); color: var(--yellow); border-color: var(--navy); }
+
+    @media (max-width: 640px) { .gallery-grid { grid-template-columns: repeat(2,1fr); } }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <div class="page-hero">
+    <span class="section-label">Gallery</span>
+    <h1>Life at Miss Amy's Daycare</h1>
+    <p>A glimpse into the warm, playful and educational environment we've created for every child in our care.</p>
+  </div>
+
+  <div class="gallery-section">
+
+    <!-- SLIDESHOW -->
+    <div class="slideshow-wrap fade-in">
+      <div class="slideshow" id="slideshow">
+        <div class="slide active">
+          <div class="slide-placeholder">
+            <span class="slide-icon">🎨</span>
+            <span class="slide-label">Photo: Creative Arts &amp; Crafts — replace with real image</span>
+          </div>
+          <div class="slide-caption">
+            <h3>Creative arts &amp; crafts</h3>
+            <p>Children exploring colour, texture and imagination through guided art activities.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-placeholder">
+            <span class="slide-icon">🌿</span>
+            <span class="slide-label">Photo: Outdoor Play &amp; Nature Exploration — replace with real image</span>
+          </div>
+          <div class="slide-caption">
+            <h3>Outdoor play &amp; nature exploration</h3>
+            <p>Fresh air, movement and discovery in our outdoor learning space.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-placeholder">
+            <span class="slide-icon">📚</span>
+            <span class="slide-label">Photo: Story Time &amp; Circle Time — replace with real image</span>
+          </div>
+          <div class="slide-caption">
+            <h3>Story time &amp; circle time</h3>
+            <p>Building language, listening skills and a love of books together.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-placeholder">
+            <span class="slide-icon">🧩</span>
+            <span class="slide-label">Photo: Sensory &amp; Messy Play — replace with real image</span>
+          </div>
+          <div class="slide-caption">
+            <h3>Sensory &amp; messy play</h3>
+            <p>Tactile experiences that support cognitive development and curiosity.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-placeholder">
+            <span class="slide-icon">🎵</span>
+            <span class="slide-label">Photo: Music &amp; Movement — replace with real image</span>
+          </div>
+          <div class="slide-caption">
+            <h3>Music &amp; movement</h3>
+            <p>Songs, rhythm and dance bringing joy and coordination to every session.</p>
+          </div>
+        </div>
+        <button class="slide-btn prev" onclick="changeSlide(-1)">&#8592;</button>
+        <button class="slide-btn next" onclick="changeSlide(1)">&#8594;</button>
+      </div>
+      <div class="slide-dots" id="dots"></div>
+    </div>
+
+    <!-- CATEGORIES -->
+    <div style="max-width:1000px;margin:0 auto">
+      <div class="gallery-categories">
+        <button class="cat-btn active" onclick="filterGallery('all', this)">All</button>
+        <button class="cat-btn" onclick="filterGallery('learning', this)">Learning &amp; Curriculum</button>
+        <button class="cat-btn" onclick="filterGallery('outdoor', this)">Outdoor Play</button>
+        <button class="cat-btn" onclick="filterGallery('creative', this)">Creative Activities</button>
+        <button class="cat-btn" onclick="filterGallery('trips', this)">Trips &amp; Outings</button>
+        <button class="cat-btn" onclick="filterGallery('sen', this)">SEN &amp; Inclusion</button>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <div class="gallery-thumb" data-cat="learning"><span class="thumb-icon">📖</span><span class="thumb-label">Phonics &amp; early reading</span><div class="thumb-overlay"><span>Phonics &amp; early reading activities</span></div></div>
+        <div class="gallery-thumb" data-cat="creative"><span class="thumb-icon">🎨</span><span class="thumb-label">Arts &amp; crafts</span><div class="thumb-overlay"><span>Creative arts and crafts sessions</span></div></div>
+        <div class="gallery-thumb" data-cat="outdoor"><span class="thumb-icon">🌳</span><span class="thumb-label">Garden exploration</span><div class="thumb-overlay"><span>Outdoor garden exploration and nature walks</span></div></div>
+        <div class="gallery-thumb" data-cat="learning"><span class="thumb-icon">🔢</span><span class="thumb-label">Counting &amp; numeracy</span><div class="thumb-overlay"><span>Early numeracy and counting games</span></div></div>
+        <div class="gallery-thumb" data-cat="creative"><span class="thumb-icon">🎵</span><span class="thumb-label">Music &amp; movement</span><div class="thumb-overlay"><span>Music, song and movement sessions</span></div></div>
+        <div class="gallery-thumb" data-cat="trips"><span class="thumb-icon">🚌</span><span class="thumb-label">Local trips &amp; outings</span><div class="thumb-overlay"><span>Community trips and local outings</span></div></div>
+        <div class="gallery-thumb" data-cat="sen"><span class="thumb-icon">🧩</span><span class="thumb-label">Sensory play</span><div class="thumb-overlay"><span>Sensory play and inclusion activities</span></div></div>
+        <div class="gallery-thumb" data-cat="outdoor"><span class="thumb-icon">⚽</span><span class="thumb-label">Physical play</span><div class="thumb-overlay"><span>Gross motor and physical development play</span></div></div>
+        <div class="gallery-thumb" data-cat="learning"><span class="thumb-icon">🌍</span><span class="thumb-label">World &amp; culture</span><div class="thumb-overlay"><span>Cultural celebrations and world awareness</span></div></div>
+      </div>
+      <p style="text-align:center;font-size:14px;color:var(--muted);margin-top:24px">📸 Photos will be added by Miss Amy. All images shared with full parental consent in line with our <a href="policies.html#gdpr">GDPR policy</a>.</p>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="shared.js"></script>
+  <script>
+    renderNav('gallery.html');
+    renderFooter();
+    initFadeIn();
+
+    // Slideshow
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById('dots');
+
+    slides.forEach((_, i) => {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === 0 ? ' active' : '');
+      d.onclick = () => goTo(i);
+      dotsContainer.appendChild(d);
+    });
+
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      dotsContainer.children[current].classList.remove('active');
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dotsContainer.children[current].classList.add('active');
+    }
+    function changeSlide(dir) { goTo(current + dir); }
+    setInterval(() => changeSlide(1), 5000);
+
+    // Gallery filter
+    function filterGallery(cat, btn) {
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-thumb').forEach(t => {
+        t.style.display = (cat === 'all' || t.dataset.cat === cat) ? 'flex' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

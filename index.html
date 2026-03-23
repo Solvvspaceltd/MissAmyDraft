@@ -3,668 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miss Amy's Daycare — Surrey Quays</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>Miss Amy's Daycare — Surrey Quays SE16</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    :root {
-      --navy: #0d1b3e;
-      --navy-mid: #1a2f5e;
-      --navy-light: #243a72;
-      --yellow: #f5c842;
-      --yellow-light: #fde98a;
-      --yellow-pale: #fef9e7;
-      --white: #ffffff;
-      --off-white: #f8f7f4;
-      --text: #1a1a2e;
-      --muted: #5a6380;
-      --border: #e2e0d8;
-      --radius: 16px;
-      --radius-sm: 8px;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      color: var(--text);
-      background: var(--white);
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3 { font-family: 'Playfair Display', serif; }
-
-    /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: var(--navy);
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 5%;
-      height: 72px;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.2);
-    }
-
-    .logo {
-      display: flex; align-items: center; gap: 12px;
-      text-decoration: none;
-    }
-
-    .logo-mark {
-      width: 44px; height: 44px;
-      background: var(--yellow);
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 22px; font-weight: 700;
-      color: var(--navy);
-    }
-
-    .logo-text { display: flex; flex-direction: column; }
-    .logo-text span:first-child {
-      font-family: 'Playfair Display', serif;
-      font-size: 16px; font-weight: 700;
-      color: var(--white); line-height: 1.1;
-    }
-    .logo-text span:last-child {
-      font-size: 11px; color: var(--yellow);
-      letter-spacing: 0.08em; text-transform: uppercase;
-    }
-
-    .nav-links {
-      display: flex; gap: 2px; list-style: none;
-    }
-    .nav-links a {
-      text-decoration: none; color: rgba(255,255,255,0.75);
-      font-size: 14px; font-weight: 400;
-      padding: 8px 14px; border-radius: 8px;
-      transition: all 0.2s;
-    }
-    .nav-links a:hover { color: var(--yellow); background: rgba(245,200,66,0.1); }
-
-    .nav-cta {
-      background: var(--yellow); color: var(--navy) !important;
-      font-weight: 500 !important; border-radius: 8px;
-      padding: 8px 18px !important;
-    }
-    .nav-cta:hover { background: var(--yellow-light) !important; color: var(--navy) !important; }
-
-    .hamburger {
-      display: none; flex-direction: column; gap: 5px;
-      cursor: pointer; background: none; border: none; padding: 4px;
-    }
-    .hamburger span {
-      display: block; width: 24px; height: 2px;
-      background: var(--white); border-radius: 2px; transition: 0.3s;
-    }
-
-    /* ── HERO ── */
+    /* HERO */
     #home {
-      min-height: 100vh;
-      background: var(--navy);
+      min-height: 100vh; background: var(--navy);
       display: grid; grid-template-columns: 1fr 1fr;
-      align-items: center;
-      padding: 120px 5% 80px;
-      gap: 60px;
-      position: relative;
-      overflow: hidden;
+      align-items: center; padding: 120px 5% 80px; gap: 60px;
+      position: relative; overflow: hidden;
     }
-
     #home::before {
-      content: '';
-      position: absolute; top: -100px; right: -100px;
+      content: ''; position: absolute; top: -100px; right: -100px;
       width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(245,200,66,0.12) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(245,200,66,0.1) 0%, transparent 70%);
       pointer-events: none;
     }
-
     .hero-badge {
       display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(245,200,66,0.15);
-      border: 1px solid rgba(245,200,66,0.3);
-      color: var(--yellow);
-      font-size: 13px; font-weight: 500;
-      padding: 6px 14px; border-radius: 100px;
-      margin-bottom: 24px;
-      letter-spacing: 0.04em;
+      background: rgba(245,200,66,0.12); border: 1px solid rgba(245,200,66,0.25);
+      color: var(--yellow); font-size: 13px; font-weight: 500;
+      padding: 6px 14px; border-radius: 100px; margin-bottom: 24px;
     }
+    .hero-badge::before { content:''; width:6px; height:6px; background:var(--yellow); border-radius:50%; }
+    .hero-content h1 { font-size: clamp(34px,5vw,56px); color: var(--white); line-height: 1.1; margin-bottom: 22px; }
+    .hero-content h1 em { font-style: normal; color: var(--yellow); }
+    .hero-content p { font-size: 18px; line-height: 1.7; color: rgba(255,255,255,0.68); max-width: 480px; margin-bottom: 36px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-stats { display: flex; gap: 36px; margin-top: 44px; padding-top: 36px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 30px; color: var(--yellow); font-weight: 700; }
+    .stat-label { font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 2px; }
 
-    .hero-badge::before {
-      content: ''; width: 6px; height: 6px;
-      background: var(--yellow); border-radius: 50%;
-    }
+    .hero-card { background: var(--navy-mid); border: 1px solid rgba(245,200,66,0.18); border-radius: 24px; padding: 36px; }
+    .hero-card-header { display: flex; align-items: center; gap: 14px; margin-bottom: 26px; }
+    .avatar { width: 52px; height: 52px; border-radius: 50%; background: var(--yellow); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 22px; color: var(--navy); font-weight: 700; }
+    .hero-card-header h3 { color: var(--white); font-size: 17px; }
+    .hero-card-header p { color: var(--yellow); font-size: 13px; margin: 0; }
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .feature-list li { display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.78); font-size: 15px; }
+    .feature-list li::before { content:'✓'; width:20px; height:20px; min-width:20px; background:rgba(245,200,66,0.15); color:var(--yellow); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; }
+    .avail-badge { margin-top:24px; padding:13px 16px; background:rgba(245,200,66,0.08); border:1px solid rgba(245,200,66,0.2); border-radius:10px; display:flex; align-items:center; gap:10px; }
+    .avail-dot { width:9px; height:9px; background:#4ade80; border-radius:50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    .avail-badge span { color:rgba(255,255,255,0.75); font-size:13px; }
 
-    .hero-content h1 {
-      font-size: clamp(36px, 5vw, 58px);
-      color: var(--white);
-      line-height: 1.1;
-      margin-bottom: 24px;
-    }
-
-    .hero-content h1 em {
-      font-style: normal; color: var(--yellow);
-    }
-
-    .hero-content p {
-      font-size: 18px; line-height: 1.7;
-      color: rgba(255,255,255,0.7);
-      max-width: 480px; margin-bottom: 40px;
-    }
-
-    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-
-    .btn-primary {
-      background: var(--yellow); color: var(--navy);
-      padding: 14px 28px; border-radius: 10px;
-      font-weight: 500; font-size: 15px;
-      text-decoration: none; border: none; cursor: pointer;
-      transition: all 0.2s; display: inline-block;
-    }
-    .btn-primary:hover { background: var(--yellow-light); transform: translateY(-1px); }
-
-    .btn-outline {
-      background: transparent; color: var(--white);
-      padding: 14px 28px; border-radius: 10px;
-      font-weight: 400; font-size: 15px;
-      text-decoration: none; border: 1px solid rgba(255,255,255,0.25);
-      transition: all 0.2s; display: inline-block;
-    }
-    .btn-outline:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }
-
-    .hero-stats {
-      display: flex; gap: 40px; margin-top: 48px;
-      padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .stat-item { display: flex; flex-direction: column; }
-    .stat-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 32px; color: var(--yellow); font-weight: 700;
-    }
-    .stat-label { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 2px; }
-
-    .hero-visual {
-      position: relative;
-      display: flex; align-items: center; justify-content: center;
-    }
-
-    .hero-card {
-      background: var(--navy-mid);
-      border: 1px solid rgba(245,200,66,0.2);
-      border-radius: 24px;
-      padding: 40px;
-      width: 100%;
-      max-width: 420px;
-    }
-
-    .hero-card-header {
-      display: flex; align-items: center; gap: 16px; margin-bottom: 28px;
-    }
-
-    .avatar {
-      width: 56px; height: 56px; border-radius: 50%;
-      background: var(--yellow);
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 22px; color: var(--navy); font-weight: 700;
-    }
-
-    .hero-card-header div h3 {
-      color: var(--white); font-size: 18px; font-weight: 600;
-    }
-    .hero-card-header div p {
-      color: var(--yellow); font-size: 13px; margin: 0;
-    }
-
-    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
-    .feature-list li {
-      display: flex; align-items: center; gap: 12px;
-      color: rgba(255,255,255,0.8); font-size: 15px;
-    }
-    .feature-list li::before {
-      content: '✓';
-      width: 22px; height: 22px; min-width: 22px;
-      background: rgba(245,200,66,0.15);
-      color: var(--yellow);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 12px; font-weight: 700;
-    }
-
-    .availability-badge {
-      margin-top: 28px; padding: 14px 18px;
-      background: rgba(245,200,66,0.1);
-      border: 1px solid rgba(245,200,66,0.2);
-      border-radius: 10px;
-      display: flex; align-items: center; gap: 12px;
-    }
-    .availability-badge .dot {
-      width: 10px; height: 10px; background: #4ade80;
-      border-radius: 50%; animation: pulse 2s infinite;
-    }
-    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
-    .availability-badge span { color: rgba(255,255,255,0.8); font-size: 14px; }
-    .availability-badge strong { color: var(--white); }
-
-    /* ── SECTIONS ── */
-    section { padding: 100px 5%; }
-
-    .section-label {
-      font-size: 12px; font-weight: 500; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--yellow);
-      background: rgba(245,200,66,0.1);
-      padding: 5px 12px; border-radius: 100px;
-      display: inline-block; margin-bottom: 16px;
-    }
-
-    .section-title {
-      font-size: clamp(28px, 4vw, 42px);
-      color: var(--navy); line-height: 1.2;
-      margin-bottom: 16px;
-    }
-
-    .section-subtitle {
-      font-size: 17px; color: var(--muted);
-      line-height: 1.7; max-width: 560px;
-    }
-
-    .section-header { margin-bottom: 60px; }
-    .section-header.center { text-align: center; }
-    .section-header.center .section-subtitle { margin: 0 auto; }
-
-    /* ── ABOUT ── */
-    #about { background: var(--off-white); }
-
-    .about-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 80px; align-items: center;
-    }
-
-    .about-image-placeholder {
-      background: var(--navy);
-      border-radius: 24px;
-      height: 480px;
-      display: flex; align-items: center; justify-content: center;
-      position: relative; overflow: hidden;
-    }
-
-    .about-image-placeholder::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: repeating-linear-gradient(
-        45deg, transparent, transparent 20px,
-        rgba(245,200,66,0.04) 20px, rgba(245,200,66,0.04) 40px
-      );
-    }
-
-    .about-image-placeholder span {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px; color: rgba(255,255,255,0.4);
-      z-index: 1;
-    }
-
-    .about-content p {
-      font-size: 16px; line-height: 1.8; color: var(--muted);
-      margin-bottom: 20px;
-    }
-
-    .qual-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
-    .chip {
+    /* QUICK ACTIONS */
+    .quick-actions { background: var(--yellow); padding: 32px 5%; }
+    .quick-actions-inner { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .quick-btn {
       background: var(--navy); color: var(--white);
-      padding: 8px 16px; border-radius: 100px;
-      font-size: 13px; font-weight: 400;
+      padding: 14px 24px; border-radius: 12px;
+      text-decoration: none; font-size: 15px; font-weight: 500;
+      display: flex; align-items: center; gap: 10px;
+      transition: all 0.2s;
     }
-    .chip.yellow { background: var(--yellow); color: var(--navy); font-weight: 500; }
+    .quick-btn:hover { background: var(--navy-mid); transform: translateY(-2px); }
+    .quick-btn .icon { font-size: 18px; }
 
-    /* ── SERVICES ── */
-    #services { background: var(--white); }
+    /* ABOUT STRIP */
+    .about-strip { background: var(--off-white); padding: 80px 5%; }
+    .about-strip-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+    .about-img { background: var(--navy); border-radius: 20px; height: 400px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .about-img::before { content:''; position:absolute; inset:0; background: repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(245,200,66,0.04) 20px,rgba(245,200,66,0.04) 40px); }
+    .about-img span { color: rgba(255,255,255,0.3); font-size: 16px; z-index:1; }
+    .about-text p { font-size:16px; line-height:1.8; color:var(--muted); margin-bottom:18px; }
+    .chips-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
 
-    .services-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-    }
-
-    .service-card {
-      background: var(--off-white);
-      border-radius: var(--radius);
-      padding: 36px 30px;
-      border: 1px solid var(--border);
-      transition: all 0.3s;
-      position: relative; overflow: hidden;
-    }
-
-    .service-card::after {
-      content: ''; position: absolute;
-      bottom: 0; left: 0; right: 0; height: 3px;
-      background: var(--yellow); opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(13,27,62,0.1); }
-    .service-card:hover::after { opacity: 1; }
-
-    .service-icon {
-      width: 52px; height: 52px;
-      background: var(--navy); border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 24px; margin-bottom: 20px;
-    }
-
-    .service-card h3 { font-size: 20px; color: var(--navy); margin-bottom: 12px; }
-    .service-card p { font-size: 15px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
-    .service-card .fee {
-      font-size: 22px; font-weight: 500; color: var(--navy);
-      font-family: 'Playfair Display', serif;
-    }
-    .service-card .fee span { font-size: 13px; color: var(--muted); font-family: 'DM Sans', sans-serif; }
-
-    /* ── DAILY ROUTINE ── */
-    #routine { background: var(--navy); }
-    #routine .section-title { color: var(--white); }
-    #routine .section-label { background: rgba(245,200,66,0.15); }
-    #routine .section-subtitle { color: rgba(255,255,255,0.6); }
-
-    .routine-timeline { display: flex; flex-direction: column; gap: 0; max-width: 700px; margin: 0 auto; }
-
-    .routine-item {
-      display: grid; grid-template-columns: 100px 1fr;
-      gap: 24px; align-items: start; position: relative;
-    }
-
-    .routine-item:not(:last-child)::after {
-      content: ''; position: absolute;
-      left: 49px; top: 52px; bottom: -8px; width: 2px;
-      background: rgba(245,200,66,0.15);
-    }
-
-    .routine-time {
-      display: flex; flex-direction: column; align-items: center;
-      padding-top: 12px;
-    }
-
-    .time-dot {
-      width: 20px; height: 20px; border-radius: 50%;
-      background: var(--yellow); border: 3px solid var(--navy);
-      box-shadow: 0 0 0 3px rgba(245,200,66,0.2);
-      margin-bottom: 8px;
-    }
-
-    .time-label {
-      font-size: 12px; color: var(--yellow); font-weight: 500;
-      text-align: center; white-space: nowrap;
-    }
-
-    .routine-content {
-      background: var(--navy-mid);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 14px; padding: 20px 24px;
-      margin-bottom: 16px;
-    }
-
-    .routine-content h4 { color: var(--white); font-size: 16px; margin-bottom: 6px; }
-    .routine-content p { color: rgba(255,255,255,0.55); font-size: 14px; line-height: 1.6; }
-
-    /* ── SEN ── */
-    #sen { background: var(--yellow-pale); }
-
-    .sen-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-
-    .sen-features { display: flex; flex-direction: column; gap: 20px; }
-    .sen-feature {
-      display: flex; gap: 16px; align-items: flex-start;
-      background: var(--white);
-      border-radius: 14px; padding: 20px 24px;
-      border: 1px solid var(--border);
-    }
-    .sen-feature-icon {
-      width: 44px; height: 44px; min-width: 44px;
-      background: var(--navy); border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 20px;
-    }
-    .sen-feature h4 { font-size: 15px; color: var(--navy); margin-bottom: 4px; }
-    .sen-feature p { font-size: 14px; color: var(--muted); line-height: 1.6; }
-
-    /* ── TESTIMONIALS ── */
+    /* TESTIMONIALS */
     #testimonials { background: var(--white); }
+    .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .testi-card { background: var(--off-white); border-radius: 16px; padding: 28px; border: 1px solid var(--border); }
+    .stars { color: var(--yellow); font-size: 17px; margin-bottom: 14px; }
+    .testi-card blockquote { font-size: 15px; color: var(--text); line-height: 1.75; font-style: italic; margin-bottom: 20px; }
+    .author { display: flex; align-items: center; gap: 10px; }
+    .author-av { width:38px; height:38px; border-radius:50%; background:var(--navy); color:var(--yellow); display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:15px; }
+    .author h4 { font-size:14px; font-weight:500; color:var(--navy); }
+    .author p { font-size:12px; color:var(--muted); }
 
-    .testimonials-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-
-    .testimonial-card {
-      background: var(--off-white);
-      border-radius: var(--radius); padding: 32px;
-      border: 1px solid var(--border);
-    }
-
-    .stars { color: var(--yellow); font-size: 18px; margin-bottom: 16px; }
-
-    .testimonial-card blockquote {
-      font-size: 15px; color: var(--text); line-height: 1.75;
-      font-style: italic; margin-bottom: 24px;
-    }
-
-    .testimonial-author { display: flex; align-items: center; gap: 12px; }
-    .author-avatar {
-      width: 40px; height: 40px; border-radius: 50%;
-      background: var(--navy); color: var(--yellow);
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Playfair Display', serif; font-size: 16px;
-    }
-    .author-info h4 { font-size: 14px; font-weight: 500; color: var(--navy); }
-    .author-info p { font-size: 12px; color: var(--muted); }
-
-    /* ── FAQs ── */
+    /* FAQS */
     #faqs { background: var(--off-white); }
+    .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item { background: var(--white); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; }
+    .faq-q { width:100%; text-align:left; padding:18px 22px; background:none; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-family:'DM Sans',sans-serif; font-size:15px; font-weight:500; color:var(--navy); }
+    .faq-q::after { content:'+'; font-size:20px; color:var(--yellow); font-weight:300; }
+    .faq-a { display:none; padding:0 22px 18px; font-size:14px; color:var(--muted); line-height:1.7; }
+    .faq-item.open .faq-q::after { content:'−'; }
+    .faq-item.open .faq-a { display:block; }
 
-    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 900px; margin: 0 auto; }
+    /* VISION */
+    .vision-bar { background: var(--navy); padding: 60px 5%; text-align: center; }
+    .vision-bar h2 { font-size: clamp(22px,3vw,34px); color: var(--white); margin-bottom: 12px; }
+    .vision-bar p { font-size:16px; color:rgba(255,255,255,0.6); max-width:560px; margin:0 auto 28px; line-height:1.7; }
 
-    .faq-item {
-      background: var(--white); border-radius: 14px;
-      border: 1px solid var(--border); overflow: hidden;
-    }
-
-    .faq-question {
-      width: 100%; text-align: left;
-      padding: 20px 24px;
-      background: none; border: none; cursor: pointer;
-      display: flex; justify-content: space-between; align-items: center;
-      font-family: 'DM Sans', sans-serif; font-size: 15px;
-      font-weight: 500; color: var(--navy);
-    }
-
-    .faq-question::after {
-      content: '+'; font-size: 20px; color: var(--yellow);
-      font-weight: 300; transition: transform 0.2s;
-    }
-
-    .faq-answer {
-      display: none; padding: 0 24px 20px;
-      font-size: 14px; color: var(--muted); line-height: 1.7;
-    }
-
-    .faq-item.open .faq-question::after { content: '−'; }
-    .faq-item.open .faq-answer { display: block; }
-
-    /* ── CONTACT ── */
-    #contact { background: var(--navy); }
-    #contact .section-title { color: var(--white); }
-    #contact .section-label { background: rgba(245,200,66,0.15); }
-    #contact .section-subtitle { color: rgba(255,255,255,0.6); }
-
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
-
-    .contact-info { display: flex; flex-direction: column; gap: 20px; }
-
-    .contact-item {
-      display: flex; gap: 16px; align-items: flex-start;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 14px; padding: 20px;
-    }
-    .contact-item-icon {
-      width: 44px; height: 44px; min-width: 44px;
-      background: rgba(245,200,66,0.15); border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 20px;
-    }
-    .contact-item h4 { color: var(--yellow); font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
-    .contact-item p { color: rgba(255,255,255,0.75); font-size: 15px; }
-
-    .contact-form { display: flex; flex-direction: column; gap: 16px; }
-
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
-    .form-group { display: flex; flex-direction: column; gap: 6px; }
-    .form-group label { font-size: 13px; color: rgba(255,255,255,0.6); font-weight: 400; }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 10px; padding: 12px 16px;
-      color: var(--white); font-family: 'DM Sans', sans-serif;
-      font-size: 15px; outline: none;
-      transition: border-color 0.2s;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus { border-color: var(--yellow); }
-
-    .form-group select option { background: var(--navy); }
-    .form-group textarea { resize: vertical; min-height: 100px; }
-
-    /* ── FOOTER ── */
-    footer {
-      background: #07102a;
-      padding: 48px 5% 32px;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .footer-grid {
-      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 48px; margin-bottom: 48px;
-    }
-
-    .footer-brand p {
-      font-size: 14px; color: rgba(255,255,255,0.45);
-      line-height: 1.7; margin-top: 16px; max-width: 280px;
-    }
-
-    .footer-col h4 {
-      color: var(--yellow); font-size: 12px;
-      text-transform: uppercase; letter-spacing: 0.08em;
-      margin-bottom: 16px; font-family: 'DM Sans', sans-serif;
-    }
-
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .footer-col ul li a {
-      color: rgba(255,255,255,0.5); text-decoration: none;
-      font-size: 14px; transition: color 0.2s;
-    }
-    .footer-col ul li a:hover { color: var(--yellow); }
-
-    .footer-bottom {
-      display: flex; justify-content: space-between; align-items: center;
-      padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06);
-      font-size: 13px; color: rgba(255,255,255,0.3);
-    }
-
-    /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      #home { grid-template-columns: 1fr; padding-top: 100px; }
-      .hero-visual { display: none; }
-      .about-grid, .sen-grid, .contact-grid { grid-template-columns: 1fr; }
-      .services-grid, .testimonials-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .faq-grid { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
+      #home { grid-template-columns: 1fr; }
+      .hero-card { display: none; }
+      .about-strip-inner { grid-template-columns: 1fr; }
+      .testi-grid { grid-template-columns: 1fr; }
     }
-
-    /* ── ANIMATE ON SCROLL ── */
-    .fade-in {
-      opacity: 0; transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-    /* ── VISION BANNER ── */
-    .vision-banner {
-      background: var(--yellow); padding: 60px 5%;
-      text-align: center;
-    }
-    .vision-banner h2 { font-size: clamp(22px,3vw,34px); color: var(--navy); margin-bottom: 12px; }
-    .vision-banner p { font-size: 16px; color: rgba(13,27,62,0.7); max-width: 600px; margin: 0 auto 28px; }
-    .vision-banner .btn-navy {
-      background: var(--navy); color: var(--yellow);
-      padding: 14px 28px; border-radius: 10px;
-      font-size: 15px; font-weight: 500; text-decoration: none;
-      display: inline-block; transition: all 0.2s;
-    }
-    .vision-banner .btn-navy:hover { background: var(--navy-mid); }
   </style>
 </head>
 <body>
+  <div id="nav-placeholder"></div>
 
-<!-- NAV -->
-<nav>
-  <a href="#home" class="logo">
-    <div class="logo-mark">M</div>
-    <div class="logo-text">
-      <span>Miss Amy's</span>
-      <span>Daycare</span>
-    </div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#routine">Daily Routine</a></li>
-    <li><a href="#sen">SEN</a></li>
-    <li><a href="#testimonials">Reviews</a></li>
-    <li><a href="#faqs">FAQs</a></li>
-    <li><a href="#contact" class="nav-cta">Enquire Now</a></li>
-  </ul>
-  <button class="hamburger" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<!-- HERO -->
-<section id="home">
-  <div class="hero-content fade-in">
-    <div class="hero-badge">Now accepting enquiries · Surrey Quays SE16</div>
-    <h1>Where little ones <em>learn, grow</em> and thrive</h1>
-    <p>A warm, professional early years setting in Surrey Quays offering nurturing childcare and education for babies, toddlers and early school-age children.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Book a Visit</a>
-      <a href="#services" class="btn-outline">View Services & Fees</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <span class="stat-num">10+</span>
-        <span class="stat-label">Years experience</span>
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-content fade-in">
+      <div class="hero-badge">Now accepting enquiries · Surrey Quays SE16</div>
+      <h1>Where little ones <em>learn, grow</em> and thrive</h1>
+      <p>A warm, professional early years setting in Surrey Quays offering nurturing childcare and education for babies, toddlers and early school-age children.</p>
+      <div class="hero-actions">
+        <a href="book-a-visit.html" class="btn-primary">Book a Visit</a>
+        <a href="waiting-list.html" class="btn-outline-white">Join Waiting List</a>
       </div>
-      <div class="stat-item">
-        <span class="stat-num">EYFS</span>
-        <span class="stat-label">Certified curriculum</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num">SEN</span>
-        <span class="stat-label">Inclusive setting</span>
+      <div class="hero-stats">
+        <div><div class="stat-num">10+</div><div class="stat-label">Years experience</div></div>
+        <div><div class="stat-num">EYFS</div><div class="stat-label">Certified curriculum</div></div>
+        <div><div class="stat-num">SEN</div><div class="stat-label">Inclusive setting</div></div>
       </div>
     </div>
-  </div>
-
-  <div class="hero-visual fade-in">
-    <div class="hero-card">
+    <div class="hero-card fade-in">
       <div class="hero-card-header">
         <div class="avatar">A</div>
-        <div>
-          <h3>Miss Amy</h3>
-          <p>Lead Childminder &amp; EYFS Practitioner</p>
-        </div>
+        <div><h3>Miss Amy</h3><p>Lead Childminder &amp; EYFS Practitioner</p></div>
       </div>
       <ul class="feature-list">
         <li>EYFS framework &amp; school readiness</li>
@@ -674,385 +135,109 @@
         <li>Wraparound care &amp; holiday club</li>
         <li>Ofsted registered setting</li>
       </ul>
-      <div class="availability-badge">
-        <div class="dot"></div>
-        <span><strong>Spaces available</strong> — September intake open</span>
+      <div class="avail-badge">
+        <div class="avail-dot"></div>
+        <span><strong style="color:white">Spaces available</strong> — September intake open</span>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="about-grid">
-    <div class="about-image-placeholder">
-      <span>Photo of Miss Amy &amp; Setting</span>
-    </div>
-    <div class="about-content fade-in">
-      <span class="section-label">About Miss Amy</span>
-      <h2 class="section-title">A trusted name in Surrey Quays childcare</h2>
-      <p>Miss Amy's Daycare is a professional, Ofsted-registered early years setting based in Surrey Quays, SE16. With over a decade of experience in early childhood education, Miss Amy provides a safe, stimulating, and deeply nurturing environment where every child is seen, valued, and supported.</p>
-      <p>Rooted in the EYFS framework, the setting places a strong emphasis on school readiness, emotional wellbeing, and inclusive practice — including specialist experience supporting children with limited speech and non-verbal communication needs.</p>
-      <p>Serving families across Southwark and the surrounding communities, Miss Amy's Daycare is committed to building strong partnerships with parents and carers at every stage of their child's early journey.</p>
-      <div class="qual-chips">
-        <span class="chip yellow">Ofsted Registered</span>
-        <span class="chip">EYFS Qualified</span>
-        <span class="chip">Paediatric First Aid</span>
-        <span class="chip">Safeguarding Lead</span>
-        <span class="chip">SEN Experience</span>
-        <span class="chip">DBS Checked</span>
-      </div>
+  <!-- QUICK ACTION BUTTONS -->
+  <div class="quick-actions">
+    <div class="quick-actions-inner">
+      <a href="book-a-visit.html" class="quick-btn"><span class="icon">📅</span> Book a Visit</a>
+      <a href="services.html" class="quick-btn"><span class="icon">📋</span> Services &amp; Fees</a>
+      <a href="gallery.html" class="quick-btn"><span class="icon">📸</span> Gallery</a>
+      <a href="daily-routine.html" class="quick-btn"><span class="icon">⏰</span> Daily Routine</a>
+      <a href="sen.html" class="quick-btn"><span class="icon">🧩</span> SEN Support</a>
+      <a href="waiting-list.html" class="quick-btn"><span class="icon">📝</span> Waiting List</a>
+      <a href="https://wa.me/447700000000" target="_blank" class="quick-btn" style="background:#25D366"><span class="icon">💬</span> WhatsApp Us</a>
     </div>
   </div>
-</section>
 
-<!-- SERVICES -->
-<section id="services">
-  <div class="section-header center fade-in">
-    <span class="section-label">Services &amp; Fees</span>
-    <h2 class="section-title">Childcare tailored to your family</h2>
-    <p class="section-subtitle">Flexible sessions designed around working families, with full-day, part-time and wraparound care options available.</p>
-  </div>
-  <div class="services-grid">
-    <div class="service-card fade-in">
-      <div class="service-icon">🍼</div>
-      <h3>Baby &amp; Toddler Care</h3>
-      <p>Dedicated care for children aged 0–3 years. Structured routines, sensory play, and gentle early learning in a home-from-home environment.</p>
-      <div class="fee">POA <span>/ per session</span></div>
-    </div>
-    <div class="service-card fade-in">
-      <div class="service-icon">📚</div>
-      <h3>Early Years Programme</h3>
-      <p>EYFS-aligned learning for 3–5 year olds. Focused on school readiness, phonics awareness, numeracy, and social skills development.</p>
-      <div class="fee">POA <span>/ per session</span></div>
-    </div>
-    <div class="service-card fade-in">
-      <div class="service-icon">🌅</div>
-      <h3>Wraparound Care</h3>
-      <p>Before and after school care for primary-age children. Safe, fun and nurturing — helping working families manage the school day.</p>
-      <div class="fee">POA <span>/ per session</span></div>
-    </div>
-    <div class="service-card fade-in">
-      <div class="service-icon">☀️</div>
-      <h3>Holiday Club</h3>
-      <p>Exciting activity programmes during school holidays. Trips, crafts, outdoor learning and themed weeks to keep children engaged.</p>
-      <div class="fee">POA <span>/ per week</span></div>
-    </div>
-    <div class="service-card fade-in">
-      <div class="service-icon">🧩</div>
-      <h3>SEN &amp; Inclusion Support</h3>
-      <p>Specialist support for children with additional needs including non-verbal and limited speech. Tailored plans and inclusive practice throughout.</p>
-      <div class="fee">POA <span>/ bespoke package</span></div>
-    </div>
-    <div class="service-card fade-in">
-      <div class="service-icon">🏫</div>
-      <h3>Future Prep School</h3>
-      <p>Miss Amy's Daycare is on an exciting journey toward becoming a fully registered prep school. Join the waiting list for early access.</p>
-      <div class="fee"><span style="font-size:15px;color:var(--yellow);font-weight:500;">Coming Soon — Join Waitlist</span></div>
-    </div>
-  </div>
-  <p style="text-align:center;margin-top:32px;font-size:14px;color:var(--muted)">All fees available upon enquiry. Government-funded hours accepted where eligible. 15–30 free hours may apply.</p>
-</section>
-
-<!-- DAILY ROUTINE -->
-<section id="routine">
-  <div class="section-header center fade-in">
-    <span class="section-label">Daily Routine</span>
-    <h2 class="section-title" style="color:var(--white)">A day at Miss Amy's Daycare</h2>
-    <p class="section-subtitle">Every day is structured, nurturing and full of purposeful learning experiences.</p>
-  </div>
-  <div class="routine-timeline fade-in">
-    <div class="routine-item">
-      <div class="routine-time"><div class="time-dot"></div><span class="time-label">7:30am</span></div>
-      <div class="routine-content"><h4>Morning welcome &amp; free play</h4><p>Children arrive, settle in and choose from a range of open-ended play activities and resources.</p></div>
-    </div>
-    <div class="routine-item">
-      <div class="routine-time"><div class="time-dot"></div><span class="time-label">9:00am</span></div>
-      <div class="routine-content"><h4>Circle time &amp; group learning</h4><p>Songs, stories, phonics and early maths in a group setting — building language and listening skills.</p></div>
-    </div>
-    <div class="routine-item">
-      <div class="routine-time"><div class="time-dot"></div><span class="time-label">10:30am</span></div>
-      <div class="routine-content"><h4>Outdoor play &amp; physical development</h4><p>Garden exploration, gross motor activities and nature-based learning in the fresh air.</p></div>
-    </div>
-    <div class="routine-item">
-      <div class="routine-time"><div class="time-dot"></div><span class="time-label">12:00pm</span></div>
-      <div class="routine-content"><h4>Lunch &amp; social skills</h4><p>Healthy, balanced meals encouraging independence, conversation and positive mealtimes.</p></div>
-    </div>
-    <div class="routine-item">
-      <div class="routine-time"><div class="time-dot"></div><span class="time-label">1:00pm</span></div>
-      <div class="routine-content"><h4>Rest time / quiet activities</h4><p>Nap time for younger children; quiet reading, drawing or puzzles for older ones.</p></div>
-    </div>
-    <div class="routine-item">
-      <div class="routine-time"><div class="time-dot"></div><span class="time-label">3:00pm</span></div>
-      <div class="routine-content"><h4>Creative &amp; sensory activities</h4><p>Arts, crafts, messy play, sensory trays and themed creative projects tied to the curriculum.</p></div>
-    </div>
-    <div class="routine-item">
-      <div class="routine-time"><div class="time-dot"></div><span class="time-label">5:30pm</span></div>
-      <div class="routine-content"><h4>Home time</h4><p>End-of-day handover with parents including verbal updates and daily diary entries.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- SEN -->
-<section id="sen">
-  <div class="sen-grid">
-    <div class="fade-in">
-      <span class="section-label">SEN &amp; Inclusion</span>
-      <h2 class="section-title">Every child deserves to be understood</h2>
-      <p class="section-subtitle" style="margin-bottom:32px">Miss Amy's Daycare has a strong track record supporting children with additional needs, including those who are non-verbal or have limited speech. Every child receives a personalised, inclusive approach.</p>
-      <a href="#contact" class="btn-primary">Discuss Your Child's Needs</a>
-    </div>
-    <div class="sen-features fade-in">
-      <div class="sen-feature">
-        <div class="sen-feature-icon">🗣️</div>
-        <div><h4>Non-verbal &amp; speech support</h4><p>Specialist strategies including visual cues, Makaton-inspired communication and PECS-style approaches.</p></div>
-      </div>
-      <div class="sen-feature">
-        <div class="sen-feature-icon">📋</div>
-        <div><h4>Individual Support Plans</h4><p>Every child with additional needs has a tailored plan reviewed regularly with parents and professionals.</p></div>
-      </div>
-      <div class="sen-feature">
-        <div class="sen-feature-icon">🤝</div>
-        <div><h4>Multi-agency collaboration</h4><p>Working alongside speech therapists, health visitors and SENCOs to ensure the best outcomes.</p></div>
-      </div>
-      <div class="sen-feature">
-        <div class="sen-feature-icon">💛</div>
-        <div><h4>Inclusive environment</h4><p>Resources, routines and spaces designed to be accessible and welcoming for all children and families.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div class="section-header center fade-in">
-    <span class="section-label">Parent Reviews</span>
-    <h2 class="section-title">What families say about us</h2>
-  </div>
-  <div class="testimonials-grid">
-    <div class="testimonial-card fade-in">
-      <div class="stars">★★★★★</div>
-      <blockquote>"Miss Amy has been incredible with our daughter. The daily updates, the love and patience she shows — we honestly couldn't ask for more. She's thriving."</blockquote>
-      <div class="testimonial-author">
-        <div class="author-avatar">S</div>
-        <div class="author-info"><h4>Sarah M.</h4><p>Parent, Surrey Quays</p></div>
-      </div>
-    </div>
-    <div class="testimonial-card fade-in">
-      <div class="stars">★★★★★</div>
-      <blockquote>"My son is non-verbal and Miss Amy has been a true godsend. She understands him in ways that genuinely surprised us. His communication has grown so much."</blockquote>
-      <div class="testimonial-author">
-        <div class="author-avatar">D</div>
-        <div class="author-info"><h4>David &amp; Priya K.</h4><p>Parents, Bermondsey</p></div>
-      </div>
-    </div>
-    <div class="testimonial-card fade-in">
-      <div class="stars">★★★★★</div>
-      <blockquote>"Professional, warm, organised and so experienced. My children have been with Miss Amy for three years and they absolutely love going every day."</blockquote>
-      <div class="testimonial-author">
-        <div class="author-avatar">T</div>
-        <div class="author-info"><h4>Tracey O.</h4><p>Parent, Canada Water</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQs -->
-<section id="faqs">
-  <div class="section-header center fade-in">
-    <span class="section-label">FAQs</span>
-    <h2 class="section-title">Common questions answered</h2>
-  </div>
-  <div class="faq-grid fade-in">
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">What ages do you accept?</button>
-      <div class="faq-answer">We welcome babies from 3 months through to school-age children up to 11 years. Different sessions are tailored to different age groups.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">Are you Ofsted registered?</button>
-      <div class="faq-answer">Yes. Miss Amy's Daycare is fully Ofsted registered, meaning you can use government-funded childcare hours and childcare vouchers where applicable.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">Do you accept funded hours?</button>
-      <div class="faq-answer">Yes, we accept 15 and 30 hours government-funded childcare for eligible children. Please enquire to check current availability and eligibility.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">How do I join the waiting list?</button>
-      <div class="faq-answer">Simply complete the enquiry form on our Contact page or call us directly. We'll be in touch to discuss availability and arrange a visit.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">What is your safeguarding policy?</button>
-      <div class="faq-answer">All staff hold up-to-date safeguarding training and DBS checks. Our full safeguarding policy is available to download from our Policies page.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" onclick="toggleFaq(this)">Can you support my child's additional needs?</button>
-      <div class="faq-answer">Yes. Miss Amy has extensive experience supporting children with SEN including non-verbal and limited speech. We create individual support plans for every child who needs one.</div>
-    </div>
-  </div>
-</section>
-
-<!-- VISION BANNER -->
-<div class="vision-banner">
-  <h2>The journey to becoming a prep school has begun</h2>
-  <p>Miss Amy's Daycare is growing. Sign up to be among the first families to hear about our exciting transition into a full early years prep school.</p>
-  <a href="#contact" class="btn-navy">Join the Waitlist</a>
-</div>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-header fade-in">
-    <span class="section-label">Get in Touch</span>
-    <h2 class="section-title">Ready to visit or find out more?</h2>
-    <p class="section-subtitle">Fill in the form and we'll be in touch within 24 hours to discuss your family's needs and arrange a visit.</p>
-  </div>
-  <div class="contact-grid">
-    <div class="contact-info fade-in">
-      <div class="contact-item">
-        <div class="contact-item-icon">📍</div>
-        <div><h4>Location</h4><p>Surrey Quays, SE16 2BW<br>Southwark, London</p></div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-item-icon">⏰</div>
-        <div><h4>Opening Hours</h4><p>Monday – Friday<br>7:30am – 6:00pm</p></div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-item-icon">📞</div>
-        <div><h4>Phone</h4><p>To be added by Miss Amy</p></div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-item-icon">✉️</div>
-        <div><h4>Email</h4><p>To be added by Miss Amy</p></div>
-      </div>
-    </div>
-    <form class="contact-form fade-in" onsubmit="handleSubmit(event)">
-      <div class="form-row">
-        <div class="form-group">
-          <label>Parent / Guardian name</label>
-          <input type="text" placeholder="Your full name" required>
+  <!-- ABOUT STRIP -->
+  <div class="about-strip">
+    <div class="about-strip-inner">
+      <div class="about-img"><span>Photo of Miss Amy &amp; Setting</span></div>
+      <div class="about-text fade-in">
+        <span class="section-label">About Miss Amy</span>
+        <h2 class="section-title">A trusted name in Surrey Quays childcare</h2>
+        <p>Miss Amy's Daycare is a professional, Ofsted-registered early years setting in Surrey Quays, SE16. With over a decade of experience, Miss Amy provides a safe, stimulating and nurturing environment where every child is seen, valued and supported.</p>
+        <p>Rooted in the EYFS framework, with specialist experience supporting children with additional needs — including non-verbal and limited speech children.</p>
+        <div class="chips-row">
+          <span class="chip yellow">Ofsted Registered</span>
+          <span class="chip">EYFS Qualified</span>
+          <span class="chip">Paediatric First Aid</span>
+          <span class="chip">SEN Experience</span>
+          <span class="chip">DBS Checked</span>
         </div>
-        <div class="form-group">
-          <label>Phone number</label>
-          <input type="tel" placeholder="07xxx xxxxxx">
+        <div style="margin-top:28px">
+          <a href="about.html" class="btn-primary">Read More About Miss Amy</a>
         </div>
       </div>
-      <div class="form-group">
-        <label>Email address</label>
-        <input type="email" placeholder="your@email.com" required>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label>Child's age</label>
-          <select>
-            <option>0–1 years</option>
-            <option>1–2 years</option>
-            <option>2–3 years</option>
-            <option>3–5 years</option>
-            <option>5+ years</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Service interested in</label>
-          <select>
-            <option>Full day care</option>
-            <option>Part-time sessions</option>
-            <option>Wraparound care</option>
-            <option>Holiday club</option>
-            <option>SEN support</option>
-            <option>General enquiry</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea placeholder="Tell us a little about your child and what you're looking for..."></textarea>
-      </div>
-      <button type="submit" class="btn-primary" style="width:100%;padding:16px;font-size:16px;">Send Enquiry</button>
-    </form>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="#home" class="logo">
-        <div class="logo-mark">M</div>
-        <div class="logo-text">
-          <span>Miss Amy's</span>
-          <span>Daycare</span>
-        </div>
-      </a>
-      <p>A professional, Ofsted-registered early years setting in Surrey Quays, SE16 — nurturing children from 3 months to school age.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Pages</h4>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services & Fees</a></li>
-        <li><a href="#routine">Daily Routine</a></li>
-        <li><a href="#sen">SEN Support</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Parents</h4>
-      <ul>
-        <li><a href="#testimonials">Reviews</a></li>
-        <li><a href="#faqs">FAQs</a></li>
-        <li><a href="#contact">Enquire</a></li>
-        <li><a href="#contact">Book a Visit</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <ul>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">GDPR Statement</a></li>
-        <li><a href="#">Safeguarding Policy</a></li>
-        <li><a href="#">Complaints Policy</a></li>
-      </ul>
     </div>
   </div>
-  <div class="footer-bottom">
-    <span>© 2025 Miss Amy's Daycare. All rights reserved.</span>
-    <span>Surrey Quays, SE16 · Ofsted Registered</span>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="section-header center fade-in">
+      <span class="section-label">Parent Reviews</span>
+      <h2 class="section-title">What families say about us</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card fade-in">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Miss Amy has been incredible with our daughter. The daily updates, the love and patience she shows — we honestly couldn't ask for more. She's thriving."</blockquote>
+        <div class="author"><div class="author-av">S</div><div><h4>Sarah M.</h4><p>Parent, Surrey Quays</p></div></div>
+      </div>
+      <div class="testi-card fade-in">
+        <div class="stars">★★★★★</div>
+        <blockquote>"My son is non-verbal and Miss Amy has been a true godsend. She understands him in ways that genuinely surprised us. His communication has grown so much."</blockquote>
+        <div class="author"><div class="author-av">D</div><div><h4>David &amp; Priya K.</h4><p>Parents, Bermondsey</p></div></div>
+      </div>
+      <div class="testi-card fade-in">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Professional, warm, organised and so experienced. My children have been with Miss Amy for three years and they absolutely love going every day."</blockquote>
+        <div class="author"><div class="author-av">T</div><div><h4>Tracey O.</h4><p>Parent, Canada Water</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section id="faqs">
+    <div class="section-header center fade-in">
+      <span class="section-label">FAQs</span>
+      <h2 class="section-title">Common questions answered</h2>
+    </div>
+    <div class="faq-list fade-in">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What ages do you accept?</button><div class="faq-a">We welcome babies from 3 months through to school-age children up to 11 years.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are you Ofsted registered?</button><div class="faq-a">Yes — fully Ofsted registered. You can use government-funded childcare hours and childcare vouchers where applicable.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you accept funded hours?</button><div class="faq-a">Yes, we accept 15 and 30 hours government-funded childcare for eligible children. Enquire to check availability.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you support my child's additional needs?</button><div class="faq-a">Yes. Miss Amy has extensive experience supporting children with SEN including non-verbal and limited speech. <a href="sen.html">Visit our SEN page</a> to learn more.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How do I join the waiting list?</button><div class="faq-a">Complete our <a href="waiting-list.html">waiting list form</a> or <a href="book-a-visit.html">book a visit</a> to discuss your needs in person.</div></div>
+    </div>
+  </section>
+
+  <!-- VISION -->
+  <div class="vision-bar">
+    <h2>The journey to becoming a prep school has begun</h2>
+    <p>Miss Amy's Daycare is growing. Be among the first families to hear about our transition into a full early years prep school.</p>
+    <a href="waiting-list.html" class="btn-primary">Join the Waitlist</a>
   </div>
-</footer>
 
-<script>
-  // Fade in on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  <div id="footer-placeholder"></div>
 
-  // FAQ toggle
-  function toggleFaq(btn) {
-    const item = btn.parentElement;
-    const wasOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!wasOpen) item.classList.add('open');
-  }
-
-  // Form submit
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('button[type=submit]');
-    btn.textContent = '✓ Enquiry sent — we\'ll be in touch soon!';
-    btn.style.background = '#4ade80';
-    btn.style.color = '#0d1b3e';
-  }
-
-  // Mobile menu
-  function toggleMenu() {
-    const links = document.querySelector('.nav-links');
-    links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
-    links.style.flexDirection = 'column';
-    links.style.position = 'absolute';
-    links.style.top = '72px'; links.style.left = '0'; links.style.right = '0';
-    links.style.background = 'var(--navy)';
-    links.style.padding = '16px 5%';
-    links.style.borderTop = '1px solid rgba(255,255,255,0.1)';
-  }
-</script>
+  <script src="shared.js"></script>
+  <script>
+    renderNav('index.html');
+    renderFooter();
+    initFadeIn();
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    }
+  </script>
 </body>
 </html>

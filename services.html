@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services &amp; Fees — Miss Amy's Daycare</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .services-section { background: var(--off-white); padding: 60px 5%; }
+    .services-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; max-width: 1000px; margin: 0 auto; }
+    .svc-card { background: var(--white); border-radius: 18px; padding: 36px; border: 1px solid var(--border); transition: all 0.3s; position: relative; overflow: hidden; }
+    .svc-card::after { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--yellow); opacity:0; transition:0.3s; }
+    .svc-card:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(13,27,62,0.08); }
+    .svc-card:hover::after { opacity:1; }
+    .svc-icon { width:52px; height:52px; background:var(--navy); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:24px; margin-bottom:20px; }
+    .svc-card h3 { font-size:20px; color:var(--navy); margin-bottom:10px; }
+    .svc-card p { font-size:15px; color:var(--muted); line-height:1.7; margin-bottom:16px; }
+    .svc-includes { list-style:none; display:flex; flex-direction:column; gap:8px; margin-bottom:20px; }
+    .svc-includes li { display:flex; align-items:center; gap:10px; font-size:14px; color:var(--text); }
+    .svc-includes li::before { content:'✓'; width:18px; height:18px; min-width:18px; background:rgba(245,200,66,0.15); color:var(--yellow); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; }
+    .svc-fee { font-family:'Playfair Display',serif; font-size:22px; color:var(--navy); border-top:1px solid var(--border); padding-top:16px; margin-top:16px; }
+    .svc-fee span { font-family:'DM Sans',sans-serif; font-size:13px; color:var(--muted); }
+    .funded-banner { background:var(--navy); color:var(--white); border-radius:16px; padding:32px 40px; max-width:1000px; margin:32px auto 0; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+    .funded-banner h3 { font-size:20px; margin-bottom:6px; }
+    .funded-banner p { font-size:14px; color:rgba(255,255,255,0.65); max-width:500px; line-height:1.6; }
+    .future-card { background:var(--yellow-pale); border:1.5px solid rgba(245,200,66,0.4); border-radius:18px; padding:36px; max-width:1000px; margin:24px auto 0; display:flex; gap:28px; align-items:center; }
+    .future-card .icon { font-size:42px; }
+    .future-card h3 { font-size:20px; color:var(--navy); margin-bottom:8px; }
+    .future-card p { font-size:15px; color:var(--muted); line-height:1.6; }
+    @media(max-width:720px){ .services-grid{grid-template-columns:1fr;} .funded-banner{flex-direction:column;} .future-card{flex-direction:column;} }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <div class="page-hero">
+    <span class="section-label">Services &amp; Fees</span>
+    <h1>Childcare tailored to your family</h1>
+    <p>Flexible sessions designed around working families, with full-day, part-time, wraparound and specialist care options available.</p>
+  </div>
+
+  <div class="services-section">
+    <div class="services-grid fade-in">
+      <div class="svc-card">
+        <div class="svc-icon">🍼</div>
+        <h3>Baby &amp; Toddler Care</h3>
+        <p>Dedicated care for children aged 3 months to 3 years. Structured routines, sensory play and gentle early learning in a home-from-home environment.</p>
+        <ul class="svc-includes">
+          <li>Key person approach</li>
+          <li>Sleep &amp; feeding routines followed</li>
+          <li>Sensory &amp; exploratory play</li>
+          <li>Daily diary &amp; parent updates</li>
+        </ul>
+        <div class="svc-fee">Price on application <span>— contact us to discuss</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">📚</div>
+        <h3>Early Years Programme (3–5 yrs)</h3>
+        <p>EYFS-aligned learning for pre-school age children, focused on school readiness, phonics, numeracy and social development.</p>
+        <ul class="svc-includes">
+          <li>EYFS framework delivery</li>
+          <li>School readiness focus</li>
+          <li>Phonics &amp; early literacy</li>
+          <li>Government funded hours accepted</li>
+        </ul>
+        <div class="svc-fee">Price on application <span>— funded hours may apply</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🌅</div>
+        <h3>Wraparound Care</h3>
+        <p>Before and after school care for primary-age children. Safe, nurturing and fun — helping working families manage the school day with ease.</p>
+        <ul class="svc-includes">
+          <li>Morning drop from 7:30am</li>
+          <li>After school collection available</li>
+          <li>Homework support offered</li>
+          <li>Hot snack provided</li>
+        </ul>
+        <div class="svc-fee">Price on application <span>/ per session</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">☀️</div>
+        <h3>Holiday Club</h3>
+        <p>Exciting, theme-based activity programmes during school holidays. Trips, crafts, outdoor learning and themed weeks that children look forward to.</p>
+        <ul class="svc-includes">
+          <li>Themed weekly activities</li>
+          <li>Local trips &amp; outings</li>
+          <li>Outdoor learning &amp; sports</li>
+          <li>Arts, crafts &amp; cooking</li>
+        </ul>
+        <div class="svc-fee">Price on application <span>/ per week or day</span></div>
+      </div>
+    </div>
+
+    <div class="funded-banner fade-in">
+      <div>
+        <h3>Government-funded childcare hours</h3>
+        <p>Miss Amy's Daycare is registered to accept 15 and 30 hours of government-funded childcare for eligible families. We also accept childcare vouchers. Contact us to check your eligibility and available hours.</p>
+      </div>
+      <a href="book-a-visit.html" class="btn-primary" style="white-space:nowrap">Ask About Funding</a>
+    </div>
+
+    <div class="future-card fade-in">
+      <div class="icon">🏫</div>
+      <div>
+        <h3>Future Prep School — Coming Soon</h3>
+        <p>Miss Amy's Daycare is on an exciting journey toward becoming a fully registered early years prep school. If you'd like to be among the first families to hear about this development and secure early placement, join our waiting list today.</p>
+        <div style="margin-top:16px"><a href="waiting-list.html" class="btn-primary">Join the Prep School Waitlist</a></div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:48px">
+      <p style="font-size:14px;color:var(--muted);margin-bottom:20px">Ready to discuss the right option for your family?</p>
+      <a href="book-a-visit.html" class="btn-primary" style="margin-right:12px">Book a Visit</a>
+      <a href="https://wa.me/447700000000" target="_blank" class="btn-whatsapp">💬 WhatsApp Us</a>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="shared.js"></script>
+  <script>renderNav('services.html'); renderFooter(); initFadeIn();</script>
+</body>
+</html>

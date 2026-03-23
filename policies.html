@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Policies — Miss Amy's Daycare</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .policies-section { background: var(--off-white); padding: 60px 5%; }
+    .policies-wrap { max-width: 860px; margin: 0 auto; }
+    .policy-block { background: var(--white); border-radius: 16px; border: 1px solid var(--border); overflow: hidden; margin-bottom: 16px; }
+    .policy-header { padding: 22px 28px; display: flex; align-items: center; gap: 16px; cursor: pointer; }
+    .policy-icon { width:44px; height:44px; min-width:44px; background:var(--navy); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:20px; }
+    .policy-header h3 { font-size:17px; color:var(--navy); flex:1; }
+    .policy-header .arr { color:var(--yellow); font-size:20px; transition:transform 0.2s; }
+    .policy-block.open .arr { transform: rotate(180deg); }
+    .policy-content { display:none; padding:0 28px 28px; }
+    .policy-block.open .policy-content { display: block; }
+    .policy-content p { font-size:15px; color:var(--muted); line-height:1.75; margin-bottom:14px; }
+    .policy-content h4 { font-size:15px; color:var(--navy); margin:20px 0 8px; }
+    .policy-content ul { list-style:none; display:flex; flex-direction:column; gap:8px; }
+    .policy-content ul li { font-size:14px; color:var(--muted); padding-left:18px; position:relative; line-height:1.6; }
+    .policy-content ul li::before { content:'–'; position:absolute; left:0; color:var(--yellow); }
+    .download-btn { display:inline-flex; align-items:center; gap:8px; background:var(--off-white); border:1px solid var(--border); border-radius:8px; padding:10px 16px; font-size:13px; color:var(--navy); text-decoration:none; margin-top:14px; transition:all 0.2s; }
+    .download-btn:hover { background:var(--navy); color:var(--yellow); }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <div class="page-hero">
+    <span class="section-label">Policies &amp; Safeguarding</span>
+    <h1>Our policies &amp; procedures</h1>
+    <p>Full transparency is important to us. All policies are available to read and download below.</p>
+  </div>
+
+  <div class="policies-section">
+    <div class="policies-wrap">
+
+      <div class="policy-block fade-in" id="safeguarding">
+        <div class="policy-header" onclick="togglePolicy(this)">
+          <div class="policy-icon">🛡️</div>
+          <h3>Safeguarding &amp; Child Protection Policy</h3>
+          <span class="arr">&#8964;</span>
+        </div>
+        <div class="policy-content">
+          <p>The safety and welfare of children in our care is our absolute priority. Miss Amy's Daycare operates in full compliance with the statutory safeguarding guidance set out in <em>Working Together to Safeguard Children</em> (2023) and the EYFS Statutory Framework.</p>
+          <h4>Key commitments</h4>
+          <ul>
+            <li>All staff hold current enhanced DBS checks and up-to-date safeguarding training</li>
+            <li>Miss Amy is the designated Safeguarding Lead for the setting</li>
+            <li>Any concerns about a child's welfare are reported promptly to the relevant local authority</li>
+            <li>Parents are made aware of safeguarding procedures on registration</li>
+            <li>Regular safeguarding reviews and training updates are maintained</li>
+          </ul>
+          <p style="margin-top:14px">If you have a safeguarding concern about a child, contact Southwark Children's Services on 020 7525 1921 or the NSPCC helpline on 0808 800 5000.</p>
+          <a href="#" class="download-btn">⬇ Download Full Safeguarding Policy (PDF)</a>
+        </div>
+      </div>
+
+      <div class="policy-block fade-in" id="gdpr">
+        <div class="policy-header" onclick="togglePolicy(this)">
+          <div class="policy-icon">🔒</div>
+          <h3>Privacy Policy &amp; GDPR</h3>
+          <span class="arr">&#8964;</span>
+        </div>
+        <div class="policy-content">
+          <p>Miss Amy's Daycare takes data protection seriously. We comply fully with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
+          <h4>What data we collect</h4>
+          <ul>
+            <li>Child registration details (name, date of birth, medical information, emergency contacts)</li>
+            <li>Parent/guardian contact details</li>
+            <li>Photos and observations (with explicit parental consent only)</li>
+            <li>Enquiry and waiting list information submitted via this website</li>
+          </ul>
+          <h4>How we use your data</h4>
+          <ul>
+            <li>To provide and administer childcare services</li>
+            <li>To communicate with parents about their child's care and development</li>
+            <li>To meet our legal obligations including safeguarding and Ofsted requirements</li>
+            <li>We never sell or share data with third parties for marketing purposes</li>
+          </ul>
+          <h4>Your rights</h4>
+          <ul>
+            <li>You have the right to access, correct or request deletion of your personal data at any time</li>
+            <li>To exercise these rights, contact us directly</li>
+          </ul>
+          <a href="#" class="download-btn">⬇ Download Full Privacy Policy (PDF)</a>
+        </div>
+      </div>
+
+      <div class="policy-block fade-in" id="fees">
+        <div class="policy-header" onclick="togglePolicy(this)">
+          <div class="policy-icon">💰</div>
+          <h3>Fees &amp; Payment Policy</h3>
+          <span class="arr">&#8964;</span>
+        </div>
+        <div class="policy-content">
+          <p>All fees are agreed in writing prior to a child starting. Our fees policy ensures clarity and fairness for all families.</p>
+          <h4>Key points</h4>
+          <ul>
+            <li>Fees are reviewed annually and families are given 4 weeks' written notice of any changes</li>
+            <li>Payment is due [weekly/monthly — to be confirmed by Miss Amy] in advance</li>
+            <li>Government-funded hours are accepted for eligible children — please enquire</li>
+            <li>Childcare vouchers and Tax-Free Childcare are accepted</li>
+            <li>A registration deposit may be required to secure a place</li>
+            <li>Notice period for leaving: 4 weeks' written notice required</li>
+          </ul>
+          <a href="#" class="download-btn">⬇ Download Fees Policy (PDF)</a>
+        </div>
+      </div>
+
+      <div class="policy-block fade-in" id="complaints">
+        <div class="policy-header" onclick="togglePolicy(this)">
+          <div class="policy-icon">📣</div>
+          <h3>Complaints Policy</h3>
+          <span class="arr">&#8964;</span>
+        </div>
+        <div class="policy-content">
+          <p>Miss Amy's Daycare is committed to providing the highest standard of care. If you have a concern or complaint, we want to hear it and resolve it promptly and fairly.</p>
+          <h4>How to raise a concern</h4>
+          <ul>
+            <li>Step 1: Speak directly with Miss Amy in the first instance — most concerns can be resolved informally</li>
+            <li>Step 2: If unresolved, submit your complaint in writing to Miss Amy's Daycare</li>
+            <li>Step 3: Written complaints will receive a formal response within 28 days</li>
+            <li>If you remain unsatisfied, you may contact Ofsted on 0300 123 1231</li>
+          </ul>
+          <a href="#" class="download-btn">⬇ Download Complaints Policy (PDF)</a>
+        </div>
+      </div>
+
+      <div class="policy-block fade-in">
+        <div class="policy-header" onclick="togglePolicy(this)">
+          <div class="policy-icon">🍎</div>
+          <h3>Health, Illness &amp; Medication Policy</h3>
+          <span class="arr">&#8964;</span>
+        </div>
+        <div class="policy-content">
+          <p>The health of all children and staff is protected through clear guidelines on illness, medication administration and health emergencies.</p>
+          <h4>Key points</h4>
+          <ul>
+            <li>Children with infectious illness must remain at home for the recommended exclusion period</li>
+            <li>Prescription medication may be administered with written parental consent and a signed medication form</li>
+            <li>Miss Amy holds a current Paediatric First Aid certificate</li>
+            <li>Any accidents or incidents are recorded and parents notified on the same day</li>
+            <li>Allergy information is held on file for every child and reviewed regularly</li>
+          </ul>
+          <a href="#" class="download-btn">⬇ Download Health &amp; Illness Policy (PDF)</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="shared.js"></script>
+  <script>
+    renderNav('policies.html'); renderFooter(); initFadeIn();
+    function togglePolicy(header) {
+      const block = header.parentElement;
+      block.classList.toggle('open');
+    }
+    // Auto-open if hash matches
+    if (window.location.hash) {
+      const el = document.querySelector(window.location.hash);
+      if (el) el.classList.add('open');
+    }
+  </script>
+</body>
+</html>

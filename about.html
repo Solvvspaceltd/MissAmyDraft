@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Miss Amy — Miss Amy's Daycare</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .about-section { background: var(--off-white); padding: 60px 5%; }
+    .about-grid { display:grid; grid-template-columns:1fr 1.4fr; gap:70px; align-items:start; max-width:1100px; margin:0 auto; }
+    .about-img { background:var(--navy); border-radius:22px; height:500px; display:flex; align-items:center; justify-content:center; position:relative; }
+    .about-img span { color:rgba(255,255,255,0.3); font-size:15px; }
+    .about-badge { position:absolute; bottom:24px; left:24px; right:24px; background:var(--yellow); border-radius:14px; padding:16px 20px; }
+    .about-badge p { font-size:14px; color:var(--navy); font-weight:500; margin:0; }
+    .about-badge span { font-size:12px; color:rgba(13,27,62,0.65); }
+    .about-text p { font-size:16px; line-height:1.8; color:var(--muted); margin-bottom:18px; }
+    .quals { display:flex; flex-direction:column; gap:12px; margin:24px 0; }
+    .qual-item { display:flex; align-items:center; gap:14px; background:var(--white); border-radius:12px; padding:14px 18px; border:1px solid var(--border); }
+    .qual-item .q-icon { font-size:20px; }
+    .qual-item h4 { font-size:14px; color:var(--navy); margin-bottom:2px; }
+    .qual-item p { font-size:13px; color:var(--muted); margin:0; }
+    .values { background:var(--navy); padding:60px 5%; }
+    .values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:1000px; margin:0 auto; }
+    .val-card { background:var(--navy-mid); border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:28px; text-align:center; }
+    .val-card .icon { font-size:32px; margin-bottom:14px; }
+    .val-card h4 { color:var(--white); font-size:16px; margin-bottom:8px; }
+    .val-card p { color:rgba(255,255,255,0.55); font-size:14px; line-height:1.6; }
+    @media(max-width:768px){ .about-grid,.values-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <div class="page-hero">
+    <span class="section-label">About</span>
+    <h1>Meet Miss Amy</h1>
+    <p>The heart behind Miss Amy's Daycare — experienced, qualified and deeply passionate about every child's early years journey.</p>
+  </div>
+
+  <div class="about-section">
+    <div class="about-grid fade-in">
+      <div style="position:relative">
+        <div class="about-img"><span>Photo of Miss Amy — add real image</span></div>
+        <div class="about-badge"><p>Miss Amy — Lead Childminder &amp; EYFS Practitioner</p><span>Surrey Quays, SE16 · Ofsted Registered · 10+ Years Experience</span></div>
+      </div>
+      <div class="about-text">
+        <span class="section-label">Her Story</span>
+        <h2 class="section-title">Dedicated to early childhood from day one</h2>
+        <p>Miss Amy founded her daycare setting in Surrey Quays with a clear vision: to create a childcare environment that felt like a genuine extension of home — warm, safe, stimulating and deeply caring.</p>
+        <p>With over a decade of experience in early childhood education and care, Miss Amy brings a wealth of professional knowledge and an innate nurturing instinct to everything she does. She is a qualified EYFS practitioner, paediatric first aider, and trained safeguarding lead.</p>
+        <p>One of Miss Amy's greatest strengths — and something parents comment on time and again — is her ability to connect with and support children with additional needs. Her specialist experience with non-verbal children and those with limited speech has helped many families find a setting where their child truly belongs.</p>
+        <p>Miss Amy's long-term vision is exciting: to grow from a highly regarded childminding setting into a fully registered early years prep school — raising the standard of early education in the Surrey Quays community.</p>
+
+        <div class="quals">
+          <div class="qual-item"><span class="q-icon">🎓</span><div><h4>EYFS Qualification</h4><p>Full Early Years Foundation Stage practitioner training</p></div></div>
+          <div class="qual-item"><span class="q-icon">🏥</span><div><h4>Paediatric First Aid</h4><p>Current &amp; up-to-date certification</p></div></div>
+          <div class="qual-item"><span class="q-icon">🛡️</span><div><h4>Safeguarding &amp; Child Protection</h4><p>Level 3 trained &amp; regularly updated</p></div></div>
+          <div class="qual-item"><span class="q-icon">✅</span><div><h4>Enhanced DBS Check</h4><p>Fully cleared &amp; Ofsted registered</p></div></div>
+          <div class="qual-item"><span class="q-icon">🧩</span><div><h4>SEN &amp; Inclusion Training</h4><p>Specialist experience with non-verbal &amp; additional needs children</p></div></div>
+        </div>
+        <a href="book-a-visit.html" class="btn-primary">Come and meet Miss Amy</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="values">
+    <div class="section-header center fade-in" style="max-width:600px;margin:0 auto 40px">
+      <span class="section-label">Values</span>
+      <h2 class="section-title" style="color:white">What we stand for</h2>
+    </div>
+    <div class="values-grid fade-in">
+      <div class="val-card"><div class="icon">💛</div><h4>Every child seen</h4><p>No child is overlooked or underestimated. We take time to understand each individual and build genuine, trusting relationships.</p></div>
+      <div class="val-card"><div class="icon">🌱</div><h4>Holistic development</h4><p>We support the whole child — cognitive, emotional, physical and social growth — not just academic milestones.</p></div>
+      <div class="val-card"><div class="icon">🤝</div><h4>Parent partnership</h4><p>Parents are partners, not just clients. We keep communication open, honest and regular at all times.</p></div>
+      <div class="val-card"><div class="icon">📚</div><h4>Excellence in early learning</h4><p>High standards of curriculum delivery, safeguarding and professional practice are non-negotiable.</p></div>
+      <div class="val-card"><div class="icon">🏡</div><h4>Home-from-home</h4><p>Children should feel safe, comfortable and happy. The setting is warm, welcoming and consistent.</p></div>
+      <div class="val-card"><div class="icon">🚀</div><h4>Ambition &amp; growth</h4><p>We're on a journey toward becoming a prep school — committed to raising the bar for early years education in SE16.</p></div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="shared.js"></script>
+  <script>renderNav('about.html'); renderFooter(); initFadeIn();</script>
+</body>
+</html>

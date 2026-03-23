@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Routine — Miss Amy's Daycare</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .routine-section { background: var(--navy); padding: 60px 5%; }
+    .routine-wrap { max-width: 760px; margin: 0 auto; }
+    .r-item { display: grid; grid-template-columns: 90px 1fr; gap: 24px; align-items: start; position: relative; }
+    .r-item:not(:last-child)::after { content:''; position:absolute; left:44px; top:48px; bottom:-8px; width:2px; background:rgba(245,200,66,0.12); }
+    .r-time { display:flex; flex-direction:column; align-items:center; padding-top:10px; }
+    .r-dot { width:18px; height:18px; border-radius:50%; background:var(--yellow); border:3px solid var(--navy); box-shadow:0 0 0 3px rgba(245,200,66,0.2); margin-bottom:8px; }
+    .r-label { font-size:12px; color:var(--yellow); font-weight:500; text-align:center; white-space:nowrap; }
+    .r-card { background:var(--navy-mid); border:1px solid rgba(255,255,255,0.07); border-radius:14px; padding:20px 24px; margin-bottom:16px; }
+    .r-card h4 { color:var(--white); font-size:16px; margin-bottom:6px; }
+    .r-card p { color:rgba(255,255,255,0.55); font-size:14px; line-height:1.65; }
+    .r-card .tag { display:inline-block; background:rgba(245,200,66,0.12); color:var(--yellow); font-size:11px; padding:3px 10px; border-radius:100px; margin-bottom:8px; }
+    .principles { background: var(--off-white); padding: 60px 5%; }
+    .prin-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .prin-card { background: var(--white); border-radius: 14px; padding: 28px; border: 1px solid var(--border); text-align: center; }
+    .prin-card .icon { font-size: 32px; margin-bottom: 14px; }
+    .prin-card h4 { font-size: 16px; color: var(--navy); margin-bottom: 8px; }
+    .prin-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+    @media (max-width:640px) { .prin-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <div class="page-hero">
+    <span class="section-label">Daily Routine</span>
+    <h1>A day at Miss Amy's Daycare</h1>
+    <p>Every day is carefully structured to balance learning, play, rest and nourishment — giving children security, stimulation and joy.</p>
+  </div>
+
+  <div class="routine-section">
+    <div class="routine-wrap fade-in">
+      <div class="r-item"><div class="r-time"><div class="r-dot"></div><span class="r-label">7:30am</span></div><div class="r-card"><div class="tag">Settling in</div><h4>Morning welcome &amp; free play</h4><p>Children arrive, settle into the environment and choose from a range of open-ended play activities, construction toys, books and creative resources.</p></div></div>
+      <div class="r-item"><div class="r-time"><div class="r-dot"></div><span class="r-label">8:30am</span></div><div class="r-card"><div class="tag">Nutrition</div><h4>Breakfast</h4><p>A healthy, balanced breakfast together — encouraging independence, conversation and positive social habits around mealtimes.</p></div></div>
+      <div class="r-item"><div class="r-time"><div class="r-dot"></div><span class="r-label">9:00am</span></div><div class="r-card"><div class="tag">EYFS Learning</div><h4>Circle time &amp; group learning</h4><p>Songs, stories, phonics, early maths and topic-based learning in a group setting. Building language, listening and communication skills.</p></div></div>
+      <div class="r-item"><div class="r-time"><div class="r-dot"></div><span class="r-label">10:00am</span></div><div class="r-card"><div class="tag">Creative</div><h4>Adult-led activity</h4><p>A focused creative, scientific or sensory activity linked to the weekly theme — arts, crafts, experiments, or cooking activities.</p></div></div>
+      <div class="r-item"><div class="r-time"><div class="r-dot"></div><span class="r-label">10:30am</span></div><div class="r-card"><div class="tag">Physical</div><h4>Snack &amp; outdoor play</h4><p>Healthy mid-morning snack followed by outdoor garden time — gross motor play, nature exploration and fresh air.</p></div></div>
+      <div class="r-item"><div class="r-time"><div class="r-dot"></div><span class="r-label">12:00pm</span></div><div class="r-card"><div class="tag">Nutrition</div><h4>Lunchtime</h4><p>A nutritious, balanced lunch. Children are encouraged to develop independence, table manners and positive relationships around food.</p></div></div>
+      <div class="r-item"><div class="r-time"><div class="r-dot"></div><span class="r-label">1:00pm</span></div><div class="r-card"><div class="tag">Rest &amp; recovery</div><h4>Rest time / quiet activities</h4><p>Sleep or rest for younger children. Quiet reading, puzzles, drawing or calm creative activities for older children.</p></div></div>
+      <div class="r-item"><div class="r-time"><div class="r-dot"></div><span class="r-label">2:30pm</span></div><div class="r-card"><div class="tag">Child-led</div><h4>Child-initiated play</h4><p>Free-flow child-led play across all areas of the setting — building on individual interests, peer relationships and imagination.</p></div></div>
+      <div class="r-item"><div class="r-time"><div class="r-dot"></div><span class="r-label">3:00pm</span></div><div class="r-card"><div class="tag">Creative</div><h4>Afternoon activity &amp; snack</h4><p>Themed creative or sensory activities, afternoon snack, and time for school-age children arriving for wraparound care.</p></div></div>
+      <div class="r-item"><div class="r-time"><div class="r-dot"></div><span class="r-label">5:00pm</span></div><div class="r-card"><div class="tag">Winding down</div><h4>Tidy-up &amp; calm activities</h4><p>Tidying together, calm story time and preparing for home. A gentle end to the day that supports transitions.</p></div></div>
+      <div class="r-item"><div class="r-time"><div class="r-dot"></div><span class="r-label">5:30pm</span></div><div class="r-card"><div class="tag">Home time</div><h4>Parent handover</h4><p>End-of-day handover with parents and carers, including verbal updates on the day's highlights, wellbeing and any notes to share.</p></div></div>
+    </div>
+  </div>
+
+  <div class="principles">
+    <div class="section-header center fade-in">
+      <span class="section-label">Our Approach</span>
+      <h2 class="section-title">Learning principles behind every day</h2>
+    </div>
+    <div class="prin-grid fade-in">
+      <div class="prin-card"><div class="icon">🎯</div><h4>EYFS Framework</h4><p>Every activity is mapped to the Early Years Foundation Stage, supporting all seven areas of learning and development.</p></div>
+      <div class="prin-card"><div class="icon">🧠</div><h4>Play-based learning</h4><p>We believe children learn best through play. Every resource and routine is designed to spark curiosity and discovery.</p></div>
+      <div class="prin-card"><div class="icon">💛</div><h4>Emotional wellbeing first</h4><p>A child who feels safe and valued is a child who can learn. Emotional security underpins everything we do.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <a href="book-a-visit.html" class="btn-primary">Come and see a day in action</a>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="shared.js"></script>
+  <script>renderNav('daily-routine.html'); renderFooter(); initFadeIn();</script>
+</body>
+</html>
