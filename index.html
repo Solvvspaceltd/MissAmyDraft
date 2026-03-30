@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miss Amy's — Surrey Quays SE16</title>
+  <title>Miss Amy's Daycare — Surrey Quays SE16</title>
   <link rel="stylesheet" href="style.css">
   <style>
     /* HERO */
@@ -48,17 +48,19 @@
     .avail-badge span { color:rgba(255,255,255,0.75); font-size:13px; }
 
     /* QUICK ACTIONS */
-    .quick-actions { background: var(--yellow); padding: 32px 5%; }
+    .quick-actions { background: var(--off-white); padding: 28px 5%; border-top: 3px solid var(--yellow); border-bottom: 1px solid var(--border); }
     .quick-actions-inner { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
     .quick-btn {
-      background: var(--navy); color: var(--white);
-      padding: 14px 24px; border-radius: 12px;
-      text-decoration: none; font-size: 15px; font-weight: 500;
+      background: var(--white); color: var(--navy);
+      padding: 14px 22px; border-radius: 12px;
+      text-decoration: none; font-size: 14px; font-weight: 500;
       display: flex; align-items: center; gap: 10px;
-      transition: all 0.2s;
+      transition: all 0.25s; border: 1.5px solid var(--border);
+      flex-direction: column; text-align: center;
     }
-    .quick-btn:hover { background: var(--navy-mid); transform: translateY(-2px); }
-    .quick-btn .icon { font-size: 18px; }
+    .quick-btn:hover { background: var(--navy); color: var(--white); border-color: var(--navy); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(13,27,62,0.12); }
+    .quick-btn .icon { font-size: 22px; }
+    .quick-btn:hover .icon { transform: scale(1.1); }
 
     /* ABOUT STRIP */
     .about-strip { background: var(--off-white); padding: 80px 5%; }
@@ -69,16 +71,7 @@
     .about-text p { font-size:16px; line-height:1.8; color:var(--muted); margin-bottom:18px; }
     .chips-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
 
-    /* TESTIMONIALS */
-    #testimonials { background: var(--white); }
-    .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-    .testi-card { background: var(--off-white); border-radius: 16px; padding: 28px; border: 1px solid var(--border); }
-    .stars { color: var(--yellow); font-size: 17px; margin-bottom: 14px; }
-    .testi-card blockquote { font-size: 15px; color: var(--text); line-height: 1.75; font-style: italic; margin-bottom: 20px; }
-    .author { display: flex; align-items: center; gap: 10px; }
-    .author-av { width:38px; height:38px; border-radius:50%; background:var(--navy); color:var(--yellow); display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:15px; }
-    .author h4 { font-size:14px; font-weight:500; color:var(--navy); }
-    .author p { font-size:12px; color:var(--muted); }
+
 
     /* FAQS */
     #faqs { background: var(--off-white); }
@@ -124,7 +117,7 @@
     </div>
     <div class="hero-card fade-in">
       <div class="hero-card-header">
-        <div class="avatar">A</div>
+        <div class="avatar" style="background:white;padding:2px;"><img src="MISSAMY_LOGO.png" alt="Logo" style="width:100%;height:100%;object-fit:contain;border-radius:50%;"></div>
         <div><h3>Miss Amy</h3><p>Lead Childminder &amp; EYFS Practitioner</p></div>
       </div>
       <ul class="feature-list">
@@ -145,13 +138,13 @@
   <!-- QUICK ACTION BUTTONS -->
   <div class="quick-actions">
     <div class="quick-actions-inner">
-      <a href="book-a-visit.html" class="quick-btn"><span class="icon">📅</span> Book a Visit</a>
-      <a href="services.html" class="quick-btn"><span class="icon">📋</span> Services &amp; Fees</a>
-      <a href="gallery.html" class="quick-btn"><span class="icon">📸</span> Gallery</a>
-      <a href="daily-routine.html" class="quick-btn"><span class="icon">⏰</span> Daily Routine</a>
-      <a href="sen.html" class="quick-btn"><span class="icon">🧩</span> SEN Support</a>
-      <a href="waiting-list.html" class="quick-btn"><span class="icon">📝</span> Waiting List</a>
-      <a href="https://wa.me/447700000000" target="_blank" class="quick-btn" style="background:#25D366"><span class="icon">💬</span> WhatsApp Us</a>
+      <a href="book-a-visit.html" class="quick-btn"><span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span> Book a Visit</a>
+      <a href="services.html" class="quick-btn"><span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span> Services &amp; Fees</a>
+      <a href="gallery.html" class="quick-btn"><span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="12" cy="10" r="3"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span> Gallery</a>
+      <a href="daily-routine.html" class="quick-btn"><span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></span> Daily Routine</a>
+      <a href="sen.html" class="quick-btn"><span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></span> SEN Support</a>
+      <a href="waiting-list.html" class="quick-btn"><span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span> Waiting List</a>
+      <a href="https://wa.me/447700000000" target="_blank" class="quick-btn" style="background:#25D366"><span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></span> WhatsApp Us</a>
     </div>
   </div>
 
@@ -178,29 +171,73 @@
     </div>
   </div>
 
-  <!-- TESTIMONIALS -->
-  <section id="testimonials">
+  <!-- TESTIMONIALS SLIDESHOW -->
+  <section id="testimonials" style="background:var(--navy);padding:80px 5%;">
     <div class="section-header center fade-in">
-      <span class="section-label">Parent Reviews</span>
-      <h2 class="section-title">What families say about us</h2>
+      <span class="section-label" style="background:rgba(200,145,26,0.15)">Parent Reviews</span>
+      <h2 class="section-title" style="color:white">What families say about us</h2>
     </div>
-    <div class="testi-grid">
-      <div class="testi-card fade-in">
-        <div class="stars">★★★★★</div>
-        <blockquote>"Miss Amy has been incredible with our daughter. The daily updates, the love and patience she shows — we honestly couldn't ask for more. She's thriving."</blockquote>
-        <div class="author"><div class="author-av">S</div><div><h4>Sarah M.</h4><p>Parent, Surrey Quays</p></div></div>
+    <div class="fade-in" style="max-width:720px;margin:0 auto;position:relative;">
+      <div style="overflow:hidden;">
+        <div id="testiTrack" style="display:flex;transition:transform 0.5s cubic-bezier(0.4,0,0.2,1);">
+          <div style="min-width:100%;padding:0 4px;">
+            <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(200,145,26,0.22);border-radius:20px;padding:40px 44px;">
+              <div style="color:var(--yellow);font-size:20px;letter-spacing:2px;margin-bottom:18px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote style="font-family:'Playfair Display',serif;font-size:22px;color:rgba(255,255,255,0.88);line-height:1.65;font-style:italic;margin-bottom:28px;">"Miss Amy has been incredible with our daughter. The daily updates, the love and patience she shows — we honestly couldn't ask for more. She is absolutely thriving."</blockquote>
+              <div style="display:flex;align-items:center;gap:14px;"><div style="width:44px;height:44px;border-radius:50%;background:var(--yellow);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:18px;color:var(--navy);font-weight:700;">S</div><div><div style="font-size:14px;font-weight:600;color:white;">Sarah M.</div><div style="font-size:12px;color:rgba(255,255,255,0.45);margin-top:2px;">Parent, Surrey Quays</div></div></div>
+            </div>
+          </div>
+          <div style="min-width:100%;padding:0 4px;">
+            <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(200,145,26,0.22);border-radius:20px;padding:40px 44px;">
+              <div style="color:var(--yellow);font-size:20px;letter-spacing:2px;margin-bottom:18px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote style="font-family:'Playfair Display',serif;font-size:22px;color:rgba(255,255,255,0.88);line-height:1.65;font-style:italic;margin-bottom:28px;">"My son is non-verbal and Miss Amy has been a true blessing. She understands him in ways that genuinely surprised us. His communication has grown so much in just a few months."</blockquote>
+              <div style="display:flex;align-items:center;gap:14px;"><div style="width:44px;height:44px;border-radius:50%;background:var(--yellow);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:18px;color:var(--navy);font-weight:700;">D</div><div><div style="font-size:14px;font-weight:600;color:white;">David &amp; Priya K.</div><div style="font-size:12px;color:rgba(255,255,255,0.45);margin-top:2px;">Parents, Bermondsey</div></div></div>
+            </div>
+          </div>
+          <div style="min-width:100%;padding:0 4px;">
+            <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(200,145,26,0.22);border-radius:20px;padding:40px 44px;">
+              <div style="color:var(--yellow);font-size:20px;letter-spacing:2px;margin-bottom:18px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote style="font-family:'Playfair Display',serif;font-size:22px;color:rgba(255,255,255,0.88);line-height:1.65;font-style:italic;margin-bottom:28px;">"Professional, warm, organised and so experienced. My children have been with Miss Amy for three years and they absolutely love going every single day."</blockquote>
+              <div style="display:flex;align-items:center;gap:14px;"><div style="width:44px;height:44px;border-radius:50%;background:var(--yellow);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:18px;color:var(--navy);font-weight:700;">T</div><div><div style="font-size:14px;font-weight:600;color:white;">Tracey O.</div><div style="font-size:12px;color:rgba(255,255,255,0.45);margin-top:2px;">Parent, Canada Water</div></div></div>
+            </div>
+          </div>
+          <div style="min-width:100%;padding:0 4px;">
+            <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(200,145,26,0.22);border-radius:20px;padding:40px 44px;">
+              <div style="color:var(--yellow);font-size:20px;letter-spacing:2px;margin-bottom:18px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote style="font-family:'Playfair Display',serif;font-size:22px;color:rgba(255,255,255,0.88);line-height:1.65;font-style:italic;margin-bottom:28px;">"From the very first visit I knew this was the right place. Miss Amy's calm, professional approach and genuine love for children made us feel completely at ease from day one."</blockquote>
+              <div style="display:flex;align-items:center;gap:14px;"><div style="width:44px;height:44px;border-radius:50%;background:var(--yellow);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:18px;color:var(--navy);font-weight:700;">A</div><div><div style="font-size:14px;font-weight:600;color:white;">Amara J.</div><div style="font-size:12px;color:rgba(255,255,255,0.45);margin-top:2px;">Parent, Rotherhithe</div></div></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="testi-card fade-in">
-        <div class="stars">★★★★★</div>
-        <blockquote>"My son is non-verbal and Miss Amy has been a true godsend. She understands him in ways that genuinely surprised us. His communication has grown so much."</blockquote>
-        <div class="author"><div class="author-av">D</div><div><h4>David &amp; Priya K.</h4><p>Parents, Bermondsey</p></div></div>
-      </div>
-      <div class="testi-card fade-in">
-        <div class="stars">★★★★★</div>
-        <blockquote>"Professional, warm, organised and so experienced. My children have been with Miss Amy for three years and they absolutely love going every day."</blockquote>
-        <div class="author"><div class="author-av">T</div><div><h4>Tracey O.</h4><p>Parent, Canada Water</p></div></div>
-      </div>
+      <div id="testiDots" style="display:flex;justify-content:center;gap:8px;margin-top:28px;"></div>
     </div>
+    <script>
+      (function(){
+        var track = document.getElementById('testiTrack');
+        var dotsWrap = document.getElementById('testiDots');
+        var slides = track.children;
+        var cur = 0;
+        for(var i=0;i<slides.length;i++){
+          var d = document.createElement('button');
+          d.style.cssText = 'width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.2);border:none;cursor:pointer;padding:0;transition:all 0.2s;';
+          if(i===0){ d.style.background='var(--yellow)'; d.style.width='24px'; d.style.borderRadius='4px'; }
+          (function(idx){ d.onclick = function(){ goTo(idx); }; })(i);
+          dotsWrap.appendChild(d);
+        }
+        function goTo(n){
+          cur=n;
+          track.style.transform='translateX(-'+(cur*100)+'%)';
+          var dots = dotsWrap.children;
+          for(var j=0;j<dots.length;j++){
+            dots[j].style.background = j===cur ? 'var(--yellow)' : 'rgba(255,255,255,0.2)';
+            dots[j].style.width = j===cur ? '24px' : '8px';
+            dots[j].style.borderRadius = j===cur ? '4px' : '50%';
+          }
+        }
+        setInterval(function(){ goTo((cur+1)%slides.length); }, 5000);
+      })();
+    </script>
   </section>
 
   <!-- FAQs -->
