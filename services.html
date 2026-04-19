@@ -1,33 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services &amp; Fees — Miss Amy's Daycare</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .services-section { background: var(--off-white); padding: 60px 5%; }
-    .services-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; max-width: 1000px; margin: 0 auto; }
-    .svc-card { background: var(--white); border-radius: 18px; padding: 36px; border: 1px solid var(--border); transition: all 0.3s; position: relative; overflow: hidden; }
-    .svc-card::after { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--yellow); opacity:0; transition:0.3s; }
-    .svc-card:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(13,27,62,0.08); }
-    .svc-card:hover::after { opacity:1; }
-    .svc-icon { width:52px; height:52px; background:var(--navy); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:24px; margin-bottom:20px; }
-    .svc-card h3 { font-size:20px; color:var(--navy); margin-bottom:10px; }
-    .svc-card p { font-size:15px; color:var(--muted); line-height:1.7; margin-bottom:16px; }
-    .svc-includes { list-style:none; display:flex; flex-direction:column; gap:8px; margin-bottom:20px; }
-    .svc-includes li { display:flex; align-items:center; gap:10px; font-size:14px; color:var(--text); }
-    .svc-includes li::before { content:'✓'; width:18px; height:18px; min-width:18px; background:rgba(245,200,66,0.15); color:var(--yellow); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; }
-    .svc-fee { font-family:'Playfair Display',serif; font-size:22px; color:var(--navy); border-top:1px solid var(--border); padding-top:16px; margin-top:16px; }
-    .svc-fee span { font-family:'DM Sans',sans-serif; font-size:13px; color:var(--muted); }
-    .funded-banner { background:var(--navy); color:var(--white); border-radius:16px; padding:32px 40px; max-width:1000px; margin:32px auto 0; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
-    .funded-banner h3 { font-size:20px; margin-bottom:6px; }
-    .funded-banner p { font-size:14px; color:rgba(255,255,255,0.65); max-width:500px; line-height:1.6; }
-    .future-card { background:var(--yellow-pale); border:1.5px solid rgba(245,200,66,0.4); border-radius:18px; padding:36px; max-width:1000px; margin:24px auto 0; display:flex; gap:28px; align-items:center; }
-    .future-card .icon { font-size:42px; }
-    .future-card h3 { font-size:20px; color:var(--navy); margin-bottom:8px; }
-    .future-card p { font-size:15px; color:var(--muted); line-height:1.6; }
-    @media(max-width:720px){ .services-grid{grid-template-columns:1fr;} .funded-banner{flex-direction:column;} .future-card{flex-direction:column;} }
-  </style>
+  <link rel="stylesheet" href="Css/style.css">
 </head>
 <body>
   <div id="nav-placeholder"></div>
@@ -100,21 +77,20 @@
     <div class="future-card fade-in">
       <div class="icon">🏫</div>
       <div>
-        <h3>Future Prep School — Coming Soon</h3>
-        <p>Miss Amy's Daycare is on an exciting journey toward becoming a fully registered early years prep school. If you'd like to be among the first families to hear about this development and secure early placement, join our waiting list today.</p>
-        <div style="margin-top:16px"><a href="waiting-list.html" class="btn-primary">Join the Prep School Waitlist</a></div>
+        <h3>Universal Credit</h3>
+        <p>Universal Credit may be available to help with childcare costs. Contact us to discuss your eligibility and how you can access this support.</p>
+        <div style="margin-top:16px"><a href="waiting-list.html" class="btn-primary">Join the Universal Credit Waitlist</a></div>
       </div>
     </div>
 
     <div style="text-align:center;margin-top:48px">
       <p style="font-size:14px;color:var(--muted);margin-bottom:20px">Ready to discuss the right option for your family?</p>
-      <a href="book-a-visit.html" class="btn-primary" style="margin-right:12px">Book a Visit</a>
       <a href="https://wa.me/447700000000" target="_blank" class="btn-whatsapp">💬 WhatsApp Us</a>
     </div>
   </div>
 
   <div id="footer-placeholder"></div>
-  <script src="shared.js"></script>
+  <script src="Js/shared.js"></script>
   <script>renderNav('services.html'); renderFooter(); initFadeIn();</script>
 </body>
 </html>

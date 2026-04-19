@@ -1,31 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Miss Amy — Miss Amy's Daycare</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .about-section { background: var(--off-white); padding: 60px 5%; }
-    .about-grid { display:grid; grid-template-columns:1fr 1.4fr; gap:70px; align-items:start; max-width:1100px; margin:0 auto; }
-    .about-img { background:var(--navy); border-radius:22px; height:500px; display:flex; align-items:center; justify-content:center; position:relative; }
-    .about-img span { color:rgba(255,255,255,0.3); font-size:15px; }
-    .about-badge { position:absolute; bottom:24px; left:24px; right:24px; background:var(--yellow); border-radius:14px; padding:16px 20px; }
-    .about-badge p { font-size:14px; color:var(--navy); font-weight:500; margin:0; }
-    .about-badge span { font-size:12px; color:rgba(13,27,62,0.65); }
-    .about-text p { font-size:16px; line-height:1.8; color:var(--muted); margin-bottom:18px; }
-    .quals { display:flex; flex-direction:column; gap:12px; margin:24px 0; }
-    .qual-item { display:flex; align-items:center; gap:14px; background:var(--white); border-radius:12px; padding:14px 18px; border:1px solid var(--border); }
-    .qual-item .q-icon { font-size:20px; }
-    .qual-item h4 { font-size:14px; color:var(--navy); margin-bottom:2px; }
-    .qual-item p { font-size:13px; color:var(--muted); margin:0; }
-    .values { background:var(--navy); padding:60px 5%; }
-    .values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:1000px; margin:0 auto; }
-    .val-card { background:var(--navy-mid); border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:28px; text-align:center; }
-    .val-card .icon { font-size:32px; margin-bottom:14px; }
-    .val-card h4 { color:var(--white); font-size:16px; margin-bottom:8px; }
-    .val-card p { color:rgba(255,255,255,0.55); font-size:14px; line-height:1.6; }
-    @media(max-width:768px){ .about-grid,.values-grid{grid-template-columns:1fr;} }
-  </style>
+  <link rel="stylesheet" href="Css/style.css">
 </head>
 <body>
   <div id="nav-placeholder"></div>
@@ -56,7 +35,6 @@
           <div class="qual-item"><span class="q-icon">✅</span><div><h4>Enhanced DBS Check</h4><p>Fully cleared &amp; Ofsted registered</p></div></div>
           <div class="qual-item"><span class="q-icon">🧩</span><div><h4>SEN &amp; Inclusion Training</h4><p>Specialist experience with non-verbal &amp; additional needs children</p></div></div>
         </div>
-        <a href="book-a-visit.html" class="btn-primary">Come and meet Miss Amy</a>
       </div>
     </div>
   </div>
@@ -77,7 +55,7 @@
   </div>
 
   <div id="footer-placeholder"></div>
-  <script src="shared.js"></script>
+  <script src="Js/shared.js"></script>
   <script>renderNav('about.html'); renderFooter(); initFadeIn();</script>
 </body>
 </html>

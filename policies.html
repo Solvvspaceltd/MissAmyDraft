@@ -1,28 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Policies — Miss Amy's Daycare</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .policies-section { background: var(--off-white); padding: 60px 5%; }
-    .policies-wrap { max-width: 860px; margin: 0 auto; }
-    .policy-block { background: var(--white); border-radius: 16px; border: 1px solid var(--border); overflow: hidden; margin-bottom: 16px; }
-    .policy-header { padding: 22px 28px; display: flex; align-items: center; gap: 16px; cursor: pointer; }
-    .policy-icon { width:44px; height:44px; min-width:44px; background:var(--navy); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:20px; }
-    .policy-header h3 { font-size:17px; color:var(--navy); flex:1; }
-    .policy-header .arr { color:var(--yellow); font-size:20px; transition:transform 0.2s; }
-    .policy-block.open .arr { transform: rotate(180deg); }
-    .policy-content { display:none; padding:0 28px 28px; }
-    .policy-block.open .policy-content { display: block; }
-    .policy-content p { font-size:15px; color:var(--muted); line-height:1.75; margin-bottom:14px; }
-    .policy-content h4 { font-size:15px; color:var(--navy); margin:20px 0 8px; }
-    .policy-content ul { list-style:none; display:flex; flex-direction:column; gap:8px; }
-    .policy-content ul li { font-size:14px; color:var(--muted); padding-left:18px; position:relative; line-height:1.6; }
-    .policy-content ul li::before { content:'–'; position:absolute; left:0; color:var(--yellow); }
-    .download-btn { display:inline-flex; align-items:center; gap:8px; background:var(--off-white); border:1px solid var(--border); border-radius:8px; padding:10px 16px; font-size:13px; color:var(--navy); text-decoration:none; margin-top:14px; transition:all 0.2s; }
-    .download-btn:hover { background:var(--navy); color:var(--yellow); }
-  </style>
+  <link rel="stylesheet" href="Css/style.css">
+
 </head>
 <body>
   <div id="nav-placeholder"></div>
@@ -151,7 +134,7 @@
   </div>
 
   <div id="footer-placeholder"></div>
-  <script src="shared.js"></script>
+  <script src="Js/shared.js"></script>
   <script>
     renderNav('policies.html'); renderFooter(); initFadeIn();
     function togglePolicy(header) {
