@@ -880,7 +880,7 @@ footer { background: #07102a; padding: 56px 5% 32px; border-top: 1px solid rgba(
 
 #hero {
 	min-height: 100vh;
-	background: var(--navy);
+	background: linear-gradient(135deg, rgba(13, 27, 62, 0.75) 0%, rgba(26, 47, 94, 0.8) 100%), url('../Img/IMG-4.jpg') center/cover no-repeat;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	align-items: center;
@@ -955,7 +955,7 @@ footer { background: #07102a; padding: 56px 5% 32px; border-top: 1px solid rgba(
 }
 
 .hero-stat .lbl {
-	font-size: 12px;
+	font-size: 16px;
 	color: rgba(255, 255, 255, 0.45);
 	margin-top: 4px;
 }
@@ -1004,7 +1004,7 @@ footer { background: #07102a; padding: 56px 5% 32px; border-top: 1px solid rgba(
 }
 
 .cred-card h4 {
-	font-size: 13px;
+	font-size: 16px;
 	color: var(--white);
 	font-family: 'DM Sans', sans-serif;
 	font-weight: 500;
@@ -1012,7 +1012,7 @@ footer { background: #07102a; padding: 56px 5% 32px; border-top: 1px solid rgba(
 }
 
 .cred-card p {
-	font-size: 11px;
+	font-size: 14px;
 	color: rgba(255, 255, 255, 0.42);
 }
 
@@ -1046,7 +1046,7 @@ footer { background: #07102a; padding: 56px 5% 32px; border-top: 1px solid rgba(
 
 .avail-badge span {
 	color: rgba(255, 255, 255, 0.75);
-	font-size: 13px;
+	font-size: 16px;
 }
 
 #actions {
@@ -1138,7 +1138,7 @@ footer { background: #07102a; padding: 56px 5% 32px; border-top: 1px solid rgba(
 }
 
 .action-card p {
-	font-size: 11px;
+	font-size: 13px;
 	color: var(--muted);
 	line-height: 1.5;
 }
