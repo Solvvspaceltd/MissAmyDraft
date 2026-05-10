@@ -3,12 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Miss Amy's Daycare gallery. See our learning spaces, outdoor play areas, creative activities and SEN inclusive environment.">
+  <meta property="og:title" content="Gallery — Miss Amy's Daycare">
+  <meta property="og:description" content="Photo gallery showcasing the warm, playful environment at Miss Amy's Daycare in Surrey Quays.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0d1b3e">
   <title>Gallery — Miss Amy's Daycare</title>
-  <link rel="icon" href="Img/favicon_missamy" type="image/x-icon">
+  <link rel="icon" href="Img/favicon_missamy.png" type="image/png">
+  <link rel="canonical" href="https://missamy-daycare.co.uk/gallery.html">
   <link rel="stylesheet" href="Css/style.css">
 </head>
 <body>
   <div id="nav-placeholder"></div>
+
+  <!-- BREADCRUMB SCHEMA MARKUP -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://missamy-daycare.co.uk/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Gallery",
+        "item": "https://missamy-daycare.co.uk/gallery.html"
+      }
+    ]
+  }
+  </script>
 
   <div class="page-hero">
     <span class="section-label">Gallery</span>
@@ -21,51 +49,7 @@
     <!-- SLIDESHOW -->
     <div class="slideshow-wrap fade-in">
       <div class="slideshow" id="slideshow">
-        <div class="slide active">
-          <div class="slide-placeholder" style="background-image: url('Img/IMG-1.jpg'); background-size: cover; background-position: center;">
-            <span class="slide-label"></span>
-          </div>
-          <div class="slide-caption">
-            <h3></h3>
-            <p></p>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="slide-placeholder" style="background-image: url('Img/IMG-2.jpg'); background-size: cover; background-position: center;">
-            <span class="slide-label"></span>
-          </div>
-          <div class="slide-caption">
-            <h3></h3>
-            <p></p>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="slide-placeholder" style="background-image: url('Img/IMG-3.jpg'); background-size: cover; background-position: center;">
-            <span class="slide-label"></span>
-          </div>
-          <div class="slide-caption">
-            <h3></h3>
-            <p></p>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="slide-placeholder" style="background-image: url('Img/IMG-4.jpg'); background-size: cover; background-position: center;">
-            <span class="slide-label"></span>
-          </div>
-          <div class="slide-caption">
-            <h3></h3>
-            <p></p>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="slide-placeholder" style="background-image: url('Img/IMG-5.jpg'); background-size: cover; background-position: center;">
-            <span class="slide-label"></span>
-          </div>
-          <div class="slide-caption">
-            <h3></h3>
-            <p></p>
-          </div>
-        </div>
+        <!-- Slides generated dynamically by JavaScript -->
         <button class="slide-btn prev" onclick="changeSlide(-1)">&#8592;</button>
         <button class="slide-btn next" onclick="changeSlide(1)">&#8594;</button>
       </div>
@@ -75,22 +59,18 @@
     <!-- CATEGORIES -->
     <div style="max-width:1000px;margin:0 auto">
       <div class="gallery-categories">
+        
         <button class="cat-btn active" onclick="filterGallery('all', this)">All</button>
-        <button class="cat-btn" onclick="filterGallery('learning', this)">Learning &amp; Curriculum</button>
-        <button class="cat-btn" onclick="filterGallery('outdoor', this)">Outdoor Play</button>
-        <button class="cat-btn" onclick="filterGallery('creative', this)">Creative Activities</button>
-        <button class="cat-btn" onclick="filterGallery('trips', this)">Trips &amp; Outings</button>
-        <button class="cat-btn" onclick="filterGallery('sen', this)">SEN &amp; Inclusion</button>
         <button class="cat-btn" onclick="filterGallery('uniforms', this)" id="uniforms">Uniforms &amp; Dress Code</button>
+        <button class="cat-btn" onclick="filterGallery('learning', this)">Learning &amp; Curriculum</button>
+        <button class="cat-btn" onclick="filterGallery('creative', this)">Creative Activities</button>
+        <button class="cat-btn" onclick="filterGallery('trips', this)">Trips &amp; Outdoor Play</button>
+        <button class="cat-btn" onclick="filterGallery('sen', this)">SEN &amp; Inclusion</button>
+        
       </div>
 
       <div class="gallery-grid" id="gallery-grid">
-       
-        <div class="gallery-thumb" data-cat="uniforms" style="background-image: url('Img/IMG-1.jpg'); background-size: cover; background-position: center;"><span class="thumb-label"></span><div class="thumb-overlay"><span>Lightweight summer collection</span></div></div>
-        <div class="gallery-thumb" data-cat="uniforms" style="background-image: url('Img/IMG-2.jpg'); background-size: cover; background-position: center;"><span class="thumb-label"></span><div class="thumb-overlay"><span></span></div></div>
-        <div class="gallery-thumb" data-cat="learning" style="background-image: url('Img/IMG-3.jpg'); background-size: cover; background-position: center;"><span class="thumb-label"></span><div class="thumb-overlay"><span></span></div></div>
-        <div class="gallery-thumb" data-cat="creative" style="background-image: url('Img/IMG-4.jpg'); background-size: cover; background-position: center;"><span class="thumb-label"></span><div class="thumb-overlay"><span></span></div></div>
-        <div class="gallery-thumb" data-cat="creative" style="background-image: url('Img/IMG-5.jpg'); background-size: cover; background-position: center;"><span class="thumb-label"></span><div class="thumb-overlay"><span></span></div></div>
+        <!-- Gallery thumbnails generated dynamically by JavaScript -->
       </div>
       <p style="text-align:center;font-size:14px;color:var(--muted);margin-top:24px">Photos will be added by Miss Amy. All images shared with full parental consent in line with our <a href="policies.html#gdpr">GDPR policy</a>.</p>
     </div>
@@ -103,11 +83,80 @@
     renderFooter();
     initFadeIn();
 
-    // Slideshow
-    let current = 0;
-    const slides = document.querySelectorAll('.slide');
-    const dotsContainer = document.getElementById('dots');
+    // Gallery data configuration - Easy to add new images!
+    // Just add a new object with: { img: 'IMG-X.jpg', cat: 'category', desc: 'optional description', alt: 'alt text' }
+    const galleryData = [
+      { img: 'IMG-1.jpg', cat: 'uniforms', desc: 'Lightweight summer collection', alt: 'Children wearing lightweight summer uniform collection at Miss Amy\'s Daycare' },
+      { img: 'IMG-2.jpg', cat: 'uniforms', alt: 'Uniform dress code display at Miss Amy\'s Daycare' },
+      { img: 'IMG-3.jpg', cat: 'learning', alt: 'Children engaged in learning and curriculum activities' },
+      { img: 'IMG-4.jpg', cat: 'sen', alt: 'SEN inclusive play environment for children with additional needs' },
+      { img: 'IMG-5.jpg', cat: 'creative', alt: 'Children doing creative artwork and crafts' },
+      { img: 'IMG-6.jpg', cat: 'uniforms', alt: 'Uniform options for different seasons' },
+      { img: 'IMG-7.jpg', cat: 'trips', alt: 'Children on outdoor trip and adventure activity' },
+      { img: 'IMG-8.jpg', cat: 'learning', alt: 'Structured learning activity at Miss Amy\'s Daycare' },
+      { img: 'IMG-9.jpg', cat: 'learning', alt: 'Early years learning and development activity' },
+      { img: 'IMG-10.jpg', cat: 'creative', alt: 'Creative play and artistic expression' },
+      { img: 'IMG-11.jpg', cat: 'creative', alt: 'Arts and crafts creative activity' },
+      { img: 'IMG-12.jpg', cat: 'trips', alt: 'Outdoor trip and outing activity' },
+      { img: 'IMG-13.jpg', cat: 'learning', alt: 'Children learning in the daycare setting' },
+      { img: 'IMG-14.jpg', cat: 'creative', alt: 'Creative workshop and hands-on activity' },
+      { img: 'IMG-15.jpg', cat: 'trips', alt: 'Group outing and outdoor adventure' },
+      { img: 'IMG-16.jpg', cat: 'learning', alt: 'Educational learning environment' },
+      { img: 'IMG-17.jpg', cat: 'sen', alt: 'Inclusive support for children with SEN' },
+      { img: 'IMG-18.jpg', cat: 'creative', alt: 'Creative play with art materials' },
+      { img: 'IMG-19.jpg', cat: 'learning', alt: 'Learning and play activity' },
+      { img: 'IMG-20.jpg', cat: 'learning', alt: 'Early years curriculum activity' },
+      { img: 'IMG-21.jpg', cat: 'trips', alt: 'Outdoor play and exploration trip' },
+      { img: 'IMG-22.jpg', cat: 'creative', alt: 'Creative expression and crafting' },
+      { img: 'IMG-23.jpg', cat: 'trips', alt: 'Community outing and adventure' },
+      { img: 'IMG-24.jpg', cat: 'sen', alt: 'Sensory and inclusive play activity' },
+      { img: 'IMG-25.jpg', cat: 'creative', alt: 'Creative and imaginative play' },
+      { img: 'IMG-26.jpg', cat: 'trips', alt: 'Educational outdoor trip' },
+      { img: 'IMG-27.jpg', cat: 'trips', alt: 'Children on outdoor adventure and exploration' },
+      { img: 'IMG-28.jpg', cat: 'sen', alt: 'Specialist support and inclusive activity' }
+    ];
 
+    // Initialize slideshow
+    const slideshowEl = document.getElementById('slideshow');
+    const dotsContainer = document.getElementById('dots');
+    const galleryGrid = document.getElementById('gallery-grid');
+    let current = 0;
+
+    // Generate slides from data
+    galleryData.forEach((item, i) => {
+      const slide = document.createElement('div');
+      slide.className = 'slide' + (i === 0 ? ' active' : '');
+      slide.innerHTML = `
+        <div class="slide-placeholder" style="background-image: url('Img/${item.img}'); background-size: cover; background-position: center;">
+          <span class="slide-label"></span>
+        </div>
+        <div class="slide-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      `;
+      slideshowEl.insertBefore(slide, slideshowEl.querySelector('.prev'));
+    });
+
+    // Generate gallery grid thumbnails from data
+    galleryData.forEach(item => {
+      const thumb = document.createElement('div');
+      thumb.className = 'gallery-thumb';
+      thumb.dataset.cat = item.cat;
+      thumb.style.backgroundImage = `url('Img/${item.img}')`;
+      thumb.style.backgroundSize = 'cover';
+      thumb.style.backgroundPosition = 'center';
+      thumb.setAttribute('role', 'img');
+      thumb.setAttribute('aria-label', item.alt || `Gallery image from Miss Amy's Daycare`);
+      thumb.innerHTML = `
+        <span class="thumb-label"></span>
+        <div class="thumb-overlay"><span>${item.desc || ''}</span></div>
+      `;
+      galleryGrid.appendChild(thumb);
+    });
+
+    // Slideshow controls
+    const slides = document.querySelectorAll('.slide');
     slides.forEach((_, i) => {
       const d = document.createElement('div');
       d.className = 'dot' + (i === 0 ? ' active' : '');

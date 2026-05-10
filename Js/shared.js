@@ -82,14 +82,14 @@ function renderNav(activePage) {
 				'<div class="logo-text"><span>Miss Amy\'s Daycare</span><span>Seek God &middot; Grow in Knowledge</span></div>' +
 			'</a>' +
 			'<ul class="nav-links">' + links +
-				'<li><a href="https://wa.me/447700000000" target="_blank" class="nav-whatsapp">' + waIcon(15, 'white') + ' WhatsApp</a></li>' +
+				'<li><a href="https://wa.me/447502312859" target="_blank" class="nav-whatsapp">' + waIcon(15, 'white') + ' WhatsApp</a></li>' +
 			'</ul>' +
 			'<button class="hamburger" onclick="toggleMobile()" aria-label="Menu"><span></span><span></span><span></span></button>' +
 		'</nav>' +
 		'<div class="mobile-menu" id="mobileMenu">' + mobileLinks +
-			'<a href="https://wa.me/447700000000" target="_blank" style="color:#25D366;display:flex;align-items:center;gap:8px;">' + waIcon(16, '#25D366') + ' WhatsApp Us</a>' +
+			'<a href="https://wa.me/447502312859" target="_blank" style="color:#25D366;display:flex;align-items:center;gap:8px;">' + waIcon(16, '#25D366') + ' WhatsApp Us</a>' +
 		'</div>' +
-		'<a href="https://wa.me/447700000000" target="_blank" class="wa-float" title="Chat on WhatsApp" aria-label="WhatsApp">' + waIcon(28, 'white') + '</a>';
+		'<a href="https://wa.me/447502312859" target="_blank" class="wa-float" title="Chat on WhatsApp" aria-label="WhatsApp">' + waIcon(28, 'white') + '</a>';
 }
 
 /* ============================================================ */
@@ -109,12 +109,11 @@ function renderFooter() {
 						'<div class="footer-logo-mark"><img src="Img/MISSAMY_LOGO.png" alt="Miss Amy\'s Daycare Logo"></div>' +
 						'<div class="footer-logo-text"><strong>Miss Amy\'s Daycare</strong><span>Seek God &middot; Grow in Knowledge</span></div>' +
 					'</a>' +
-					'<p>A professional, Ofsted-registered early years setting in Surrey Quays, SE16 &mdash; nurturing children from 3 months to school age.</p>' +
+					'<p>A professional, Ofsted-registered early years setting in Surrey Quays, SE16 &mdash; nurturing children from 3 months to school age. Ofsted number (2514998)</p>' +
 					'<div class="social-links">' +
 						'<a href="https://instagram.com/" target="_blank" class="social-btn" title="Instagram" aria-label="Instagram">' + ICON_IG + '</a>' +
-						'<a href="https://facebook.com/" target="_blank" class="social-btn" title="Facebook" aria-label="Facebook">' + ICON_FB + '</a>' +
 						'<a href="https://tiktok.com/" target="_blank" class="social-btn" title="TikTok" aria-label="TikTok">' + ICON_TT + '</a>' +
-						'<a href="https://wa.me/447700000000" target="_blank" class="social-btn" title="WhatsApp" aria-label="WhatsApp">' + waIcon(17, 'rgba(255,255,255,0.7)') + '</a>' +
+									'<a href="https://wa.me/447502312859" target="_blank" class="social-btn" title="WhatsApp" aria-label="WhatsApp">' + waIcon(17, 'rgba(255,255,255,0.7)') + '</a>' +
 					'</div>' +
 				'</div>' +
 				/* Setting Links */
@@ -142,7 +141,7 @@ function renderFooter() {
 			/* Footer Bottom */
 			'<div class="footer-bottom">' +
 				'<span>&copy; 2025 Miss Amy\'s Daycare. All rights reserved.</span>' +
-				'<span>Surrey Quays, SE16 &middot; Ofsted Registered &middot; <a href="policies.html" style="color:inherit">Privacy Policy</a></span>' +
+			'<span>Surrey Quays, SE16 &middot; Ofsted Registered (2514998) &middot; <a href="policies.html" style="color:inherit">Privacy Policy</a></span>' +
 				'<span style="color:rgba(255,255,255,0.2);font-size:11px;">Designed &amp; built by <a href="#" style="color:rgba(200,145,26,0.5);text-decoration:none;" onmouseover="this.style.color=\'#c8911a\'" onmouseout="this.style.color=\'rgba(200,145,26,0.5)\'">Solvvspace</a></span>' +
 			'</div>' +
 		'</footer>';
