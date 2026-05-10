@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /Js/
+Disallow: /Css/
+Disallow: /Img/
+
+Sitemap: https://missamy-daycare.co.uk/sitemap.xml
