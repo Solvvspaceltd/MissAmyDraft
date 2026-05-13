@@ -53,22 +53,22 @@
     </div>
 
     <div class="form-card fade-in">
-      <form onsubmit="handleFormSubmit(event, 'wl-success')">
+      <form method="POST" action="https://formspree.io/f/xaqvaqoj" id="wl-form">
 
         <!-- Section 1: Parent/Guardian -->
         <h3 class="form-section-title">Parent / Guardian details</h3>
         <div class="form-grid">
           <div class="form-group">
             <label>First name <span class="req">*</span></label>
-            <input type="text" placeholder="First name" required>
+            <input type="text" name="parent_first_name" placeholder="First name" required>
           </div>
           <div class="form-group">
             <label>Last name <span class="req">*</span></label>
-            <input type="text" placeholder="Last name" required>
+            <input type="text" name="parent_last_name" placeholder="Last name" required>
           </div>
           <div class="form-group">
             <label>Relationship to child <span class="req">*</span></label>
-            <select required>
+            <select name="relationship" required>
               <option value="">Select</option>
               <option>Mother</option>
               <option>Father</option>
@@ -78,19 +78,19 @@
           </div>
           <div class="form-group">
             <label>Occupation <span class="req">*</span></label>
-            <input type="text" placeholder="Occupation" required>
+            <input type="text" name="occupation" placeholder="Occupation" required>
           </div>
           <div class="form-group">
             <label>Phone number <span class="req">*</span></label>
-            <input type="tel" placeholder="07xxx xxxxxx" required>
+            <input type="tel" name="phone" placeholder="07xxx xxxxxx" required>
           </div>
           <div class="form-group">
             <label>Email address <span class="req">*</span></label>
-            <input type="email" placeholder="your@email.com" required>
+            <input type="email" name="email" placeholder="your@email.com" required>
           </div>
           <div class="form-group">
             <label>Home postcode</label>
-            <input type="text" placeholder="e.g. SE16 2BW">
+            <input type="text" name="postcode" placeholder="e.g. SE16 2BW">
           </div>
         </div>
 
@@ -99,19 +99,19 @@
         <div class="form-grid">
           <div class="form-group">
             <label>Child's first name <span class="req">*</span></label>
-            <input type="text" placeholder="Child's name" required>
+            <input type="text" name="child_first_name" placeholder="Child's name" required>
           </div>
           <div class="form-group">
             <label>Child's last name</label>
-            <input type="text" placeholder="Last name">
+            <input type="text" name="child_last_name" placeholder="Last name">
           </div>
           <div class="form-group">
             <label>Date of birth <span class="req">*</span></label>
-            <input type="date" required>
+            <input type="date" name="dob" required>
           </div>
           <div class="form-group">
             <label>Gender</label>
-            <select>
+            <select name="gender">
               <option value="">Prefer not to say</option>
               <option>Girl</option>
               <option>Boy</option>
@@ -125,7 +125,7 @@
         <div class="form-grid">
           <div class="form-group">
             <label>Type of care needed <span class="req">*</span></label>
-            <select required>
+            <select name="care_type" required>
               <option value="">Please select</option>
               <option>Full day care (7:30am–6pm)</option>
               <option>Morning sessions only</option>
@@ -137,7 +137,7 @@
           </div>
           <div class="form-group">
             <label>How many days per week? <span class="req">*</span></label>
-            <select required>
+            <select name="days_per_week" required>
               <option value="">Select</option>
               <option>1 day</option>
               <option>2 days</option>
@@ -150,16 +150,16 @@
           <div class="form-group full">
             <label>Which days would you need? (tick all that apply)</label>
             <div class="checkbox-group" style="display:flex;flex-direction:row;flex-wrap:wrap;gap:16px;margin-top:8px">
-              <label class="checkbox-label"><input type="checkbox"> Monday</label>
-              <label class="checkbox-label"><input type="checkbox"> Tuesday</label>
-              <label class="checkbox-label"><input type="checkbox"> Wednesday</label>
-              <label class="checkbox-label"><input type="checkbox"> Thursday</label>
-              <label class="checkbox-label"><input type="checkbox"> Friday</label>
+              <label class="checkbox-label"><input type="checkbox" name="days" value="Monday"> Monday</label>
+              <label class="checkbox-label"><input type="checkbox" name="days" value="Tuesday"> Tuesday</label>
+              <label class="checkbox-label"><input type="checkbox" name="days" value="Wednesday"> Wednesday</label>
+              <label class="checkbox-label"><input type="checkbox" name="days" value="Thursday"> Thursday</label>
+              <label class="checkbox-label"><input type="checkbox" name="days" value="Friday"> Friday</label>
             </div>
           </div>
           <div class="form-group">
             <label>Desired start date <span class="req">*</span></label>
-            <select required>
+            <select name="start_date" required>
               <option value="">Please select</option>
               <option>As soon as possible</option>
               <option>Within 1 month</option>
@@ -172,7 +172,7 @@
           </div>
           <div class="form-group">
             <label>Are you eligible for funded hours?</label>
-            <select>
+            <select name="funded_hours">
               <option>Not sure</option>
               <option>Yes — 15 hours</option>
               <option>Yes — 30 hours</option>
@@ -186,7 +186,7 @@
         <div class="form-grid">
           <div class="form-group full">
             <label>Does your child have any additional needs, diagnosis or EHCP?</label>
-            <select id="sen-select" onchange="toggleSenDetail(this.value)">
+            <select name="sen_status" id="sen-select" onchange="toggleSenDetail(this.value)">
               <option value="no">No</option>
               <option value="yes">Yes</option>
               <option value="pending">Under assessment / awaiting diagnosis</option>
@@ -195,15 +195,15 @@
           </div>
           <div class="form-group full" id="sen-detail" style="display:none">
             <label>Please provide brief details</label>
-            <textarea placeholder="e.g. autism, non-verbal, speech delay, ADHD, EHCP in place — any detail that helps us understand how to best support your child..."></textarea>
+            <textarea name="sen_details" placeholder="e.g. autism, non-verbal, speech delay, ADHD, EHCP in place — any detail that helps us understand how to best support your child..."></textarea>
           </div>
           <div class="form-group full">
             <label>Does your child have any allergies or medical conditions we should know about?</label>
-            <textarea placeholder="e.g. nut allergy (EpiPen required), asthma, eczema — or type 'None' if not applicable"></textarea>
+            <textarea name="medical_info" placeholder="e.g. nut allergy (EpiPen required), asthma, eczema — or type 'None' if not applicable"></textarea>
           </div>
           <div class="form-group full">
             <label>Any dietary requirements?</label>
-            <input type="text" placeholder="e.g. vegetarian, halal, dairy free, or 'None'">
+            <input type="text" name="dietary_requirements" placeholder="e.g. vegetarian, halal, dairy free, or 'None'">
           </div>
         </div>
 
@@ -212,7 +212,7 @@
         <div class="form-grid">
           <div class="form-group">
             <label>How did you hear about Miss Amy's Daycare?</label>
-            <select>
+            <select name="referral_source">
               <option>Word of mouth / recommendation</option>
               <option>Google search</option>
               <option>Instagram</option>
@@ -226,7 +226,7 @@
           </div>
           <div class="form-group">
             <label>Are you also interested in the future prep school?</label>
-            <select>
+            <select name="prep_school_interest">
               <option>Yes — very interested</option>
               <option>Possibly, tell me more</option>
               <option>No, just current childcare</option>
@@ -234,28 +234,25 @@
           </div>
           <div class="form-group full">
             <label>Anything else you'd like us to know?</label>
-            <textarea placeholder="Any questions, specific requirements, or anything that would help us support your family..."></textarea>
+            <textarea name="additional_notes" placeholder="Any questions, specific requirements, or anything that would help us support your family..."></textarea>
           </div>
         </div>
 
         <!-- Consent -->
         <div class="form-group" style="margin-top:8px">
           <label class="checkbox-label">
-            <input type="checkbox" required>
+            <input type="checkbox" name="privacy_consent" required>
             I confirm the information provided is accurate and I agree to my details being stored and used to contact me about childcare availability, in line with Miss Amy's Daycare's <a href="policies.html">Privacy Policy</a>. <span class="req">*</span>
           </label>
         </div>
         <div class="form-group">
           <label class="checkbox-label">
-            <input type="checkbox">
+            <input type="checkbox" name="marketing_consent">
             I'd like to receive occasional updates about new services, the prep school development and holiday club availability.
           </label>
         </div>
 
         <button type="submit" class="btn-primary form-submit">Submit Waiting List Application</button>
-        <div class="success-msg" id="wl-success">
-          🎉 Thank you for registering! We've received your application and will be in touch within 48 hours to confirm your place on the waiting list.
-        </div>
         <p class="form-note">Your information is stored securely and never shared with third parties. <a href="policies.html#gdpr">Read our full GDPR policy.</a></p>
       </form>
     </div>

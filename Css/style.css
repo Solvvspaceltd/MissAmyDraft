@@ -436,6 +436,7 @@ section {
 	padding-bottom: 12px;
 	border-bottom: 2px solid var(--yellow);
 	font-family: 'Playfair Display', serif;
+	margin-top: 32px;
 }
 
 .form-grid {
@@ -2547,6 +2548,113 @@ footer { background: #07102a; padding: 56px 5% 32px; border-top: 1px solid rgba(
 	font-size: 14px;
 	color: var(--muted);
 	line-height: 1.6;
+}
+
+/* ============================================================ */
+/* PROFESSIONAL TRAINING PAGE */
+/* ============================================================ */
+
+.training-section {
+	padding: 48px 20px;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.training-intro {
+	margin-bottom: 48px;
+}
+
+.training-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 24px;
+	margin-bottom: 48px;
+}
+
+.training-cta {
+	background: linear-gradient(135deg, #0d1b3e 0%, #1a2d5c 100%);
+	color: white;
+	padding: 40px;
+	border-radius: 8px;
+	text-align: center;
+}
+
+.training-cta h3 {
+	color: white;
+	margin-top: 0;
+}
+
+.training-cta .btn-primary {
+	background: white;
+	color: #0d1b3e;
+	margin-top: 16px;
+}
+
+.training-intro p {
+	font-size: 16px;
+	color: var(--muted);
+	line-height: 1.8;
+	margin: 20px 0;
+}
+
+.form-card h2 {
+	text-align: center;
+	margin-bottom: 32px;
+}
+
+.form-card .form-group {
+	margin-top: 8px;
+}
+
+/* ============================================================ */
+/* HOMEPAGE STYLES */
+/* ============================================================ */
+
+.avail-badge strong {
+	color: white;
+}
+
+.action-arrow.wa {
+	color: #25D366;
+}
+
+.btn-outline-white.small {
+	font-size: 13px;
+	padding: 10px 20px;
+	white-space: nowrap;
+}
+
+.section-subtitle {
+	font-size: 14px;
+	color: var(--muted);
+	margin-top: 6px;
+}
+
+.about-side-buttons {
+	margin-top: 28px;
+	display: flex;
+	gap: 14px;
+	flex-wrap: wrap;
+}
+
+.vision-bar-gold {
+	background: linear-gradient(135deg, #c8911a 0%, #a6771e 100%);
+	margin: 0;
+}
+
+.vision-bar-gold .section-label {
+	background: rgba(200, 145, 26, 0.2);
+	color: #fffaf1;
+}
+
+.vision-bar-gold .btn-navy {
+	background: white;
+	color: #0d1b3e;
+}
+
+.vision-bar-navy .section-label {
+	background: rgba(13, 27, 62, 0.1);
+	color: var(--navy);
 }
 
 /* ============================================================ */
