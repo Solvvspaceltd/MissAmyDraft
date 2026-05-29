@@ -109,7 +109,7 @@ function renderFooter() {
 						'<div class="footer-logo-mark"><img src="Img/MISSAMY_LOGO.png" alt="Miss Amy\'s Daycare Logo"></div>' +
 						'<div class="footer-logo-text"><strong>Miss Amy\'s Daycare</strong><span>Seek God &middot; Grow in Knowledge</span></div>' +
 					'</a>' +
-					'<p>A professional, Ofsted-registered early years setting in Surrey Quays, SE16 &mdash; nurturing children from 3 months to school age. Ofsted number (2514998)</p>' +
+					'<p>A professional, Ofsted-registered early years setting in Surrey Quays, SE16; nurturing children from 3 months to school age. Ofsted number (2514998)</p>' +
 					'<div class="social-links">' +
 						'<a href="https://instagram.com/" target="_blank" class="social-btn" title="Instagram" aria-label="Instagram">' + ICON_IG + '</a>' +
 						'<a href="https://tiktok.com/" target="_blank" class="social-btn" title="TikTok" aria-label="TikTok">' + ICON_TT + '</a>' +
